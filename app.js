@@ -3,13 +3,14 @@
 
   const ACCESS_PASSWORD = "261126";
   const ACCESS_SESSION_KEY = "bhutan-2026-access";
+  const ACCESS_COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
 
   const IMAGE_DATA = {
-    festival: {
-      src: "assets/images/festival-mask-dance.jpg",
-      alt: "A masked dancer performing during a Bhutanese Buddhist festival",
-      credit: "Richapandkar via Wikimedia Commons · CC BY-SA 4.0",
-      url: "https://commons.wikimedia.org/wiki/File:Mesmerizing_colors_and_grace_while_witnessing_this_Traditional_Buddhist_Mask_Dance_at_the_Black-necked_Crane_Festival,_Gangte_Monastery,_Phobjikha_Valley,_Bhutan.jpg"
+    jambay: {
+      src: "assets/images/jambay-festival.jpg",
+      alt: "Archival photograph of masked dancers at the Jambay Lhakhang festival in Jakar, Bumthang",
+      credit: "ManInBlack23! via Wikimedia Commons · CC BY-SA 4.0 · 2009 archival image",
+      url: "https://commons.wikimedia.org/wiki/File:Bhutan,_Jambay_Lakhang_Festival_dancers.jpg"
     },
     phobjikha: {
       src: "assets/images/phobjikha-valley.jpg",
@@ -17,129 +18,86 @@
       credit: "stull17 via Wikimedia Commons · CC BY 2.0",
       url: "https://commons.wikimedia.org/wiki/File:Phobjika_Valley_view,_Bhutan.jpg"
     },
-    punakha: {
-      src: "assets/images/punakha-dzong-wide.jpg",
-      alt: "Punakha Dzong between rivers and green valley slopes",
-      credit: "Wikimedia Commons contributor",
-      url: "https://commons.wikimedia.org/wiki/File:Punakha_Dzong,_Bhutan_02.jpg"
-    },
-    cranes: {
-      src: "assets/images/black-necked-crane.jpg",
-      alt: "A black-necked crane standing in the winter grasslands of Phobjikha",
-      credit: "Dibyendu Ash via Wikimedia Commons · CC BY 4.0",
-      url: "https://commons.wikimedia.org/wiki/File:Black-necked_Crane_Phobjika_Bhutan_November_2018.jpg"
-    },
-    craft: {
-      src: "assets/images/craft-sewing.jpg",
-      alt: "Students practising traditional sewing in a Bhutanese arts classroom",
-      credit: "Arian Zwegers via Wikimedia Commons · CC BY 2.0",
-      url: "https://commons.wikimedia.org/wiki/File:Thimphu,_traditional_arts,_sewing_class_(15656544270).jpg"
-    },
-    village: {
-      src: "assets/images/ura-village.jpg",
-      alt: "Traditional houses in a Bhutanese mountain village",
-      credit: "Christopher J. Fynn via Wikimedia Commons · CC BY 3.0",
-      url: "https://commons.wikimedia.org/wiki/File:Ura_Bumthang_Bhutan-2007-12-28.JPG"
+    nalakhar: {
+      src: "assets/images/nalakhar-festival.jpg",
+      alt: "Masked dancer in ornate costume during a Nalakhar Tshechu festival gathering in Bumthang, with local spectators gathered around the courtyard",
+      credit: "VisitBhutan.com · reference photograph, not a 2026 image",
+      url: "https://visitbhutan.com/festival-detail.php?id=51"
     }
   };
 
   const ROUTES = [
     {
       id: "A",
-      name: "Living Culture",
-      subtitle: "Festival, Community & Cultural Immersion",
-      image: "festival",
-      core: "Travel further into Central Bhutan for Bumthang, living traditions, Buddhist heritage, craft and community life. This is the deepest cultural route, and the most logistically complicated.",
-      duration: "9–10 days",
-      route: "Paro → Thimphu → Bumthang → Phobjikha → Paro",
-      stay: "Two nights Thimphu · three Bumthang · two Phobjikha · two Paro. Treat Punakha as a day stop only if the road day remains sensible.",
-      birthday: "A full day in Bumthang: a local cultural or community experience, a relaxed meal and private dinner with friends. Festival participation only if the confirmed programme makes sense. Culture first; cake, if invited, later.",
+      name: "Bumthang-led",
+      subtitle: "Festival First",
+      image: "jambay",
+      birthdayLocation: "Bumthang",
+      core: "Reach Bumthang as early as the transport plan sensibly allows, then let the festival window, monasteries, craft and local life set the pace. The trip stays mostly in Central Bhutan, with a birthday that is actually in the place we came to see.",
+      duration: "7–9 days",
+      route: "Paro → Thimphu → Bumthang → Paro",
+      stay: "Two nights Thimphu · three or four Bumthang · one Paro. Keep the overnight pattern simple; the roads already provide enough plot.",
+      birthday: "A full Bumthang day on 26 November: festival or local cultural life if access and timing are confirmed, a relaxed meal, some unprogrammed time and a private dinner. A cake may appear; it need not be the itinerary.",
       advantages: [
-        "Deepest exposure to Bhutanese living traditions",
-        "Best chance of including the Bumthang festival window",
-        "Strong spiritual, craft and community dimension"
+        "Festival is the centre, not a side quest",
+        "More time for Bumthang’s spiritual, craft and community life",
+        "Fewer western transfers after the birthday"
       ],
       tradeoffs: [
-        "More long-distance movement than the slow route; hotel changes should be kept to a minimum",
-        "May benefit from a domestic flight and a road fallback",
-        "Less slow time in the western valleys"
+        "Less Phobjikha, Punakha and Paro depth",
+        "Arrival timing matters if Jambay’s 24 November date is the priority",
+        "Domestic flight and road fallback need coordination"
       ],
-      road: "Highest · about 18–23 estimated road hours",
-      flight: "Potential Paro → Bumthang flight; reconfirm before booking",
-      suited: "Travellers happy to accept more movement for deeper cultural immersion.",
-      giveUp: "Unhurried time, flexibility and probably some budget.",
+      road: "Moderate to high · Central Bhutan roads still do the talking",
+      flight: "Potential Paro → Bumthang flight; schedule and road fallback require reconfirmation",
+      suited: "Travellers who would rather stay with the festival than collect more valleys.",
+      giveUp: "Western Bhutan variety, some wildlife time and the neatness of a broader loop.",
       places: [
         ["National Institute for Zorig Chusum", "Thimphu", "A useful place to see how traditional skills are taught and carried into modern livelihoods.", "https://bhutan.travel/adventure_art"],
-        ["Jambay Lhakhang", "Bumthang", "A sacred site at the centre of the festival question. The 2026 dates are tentative and need reconfirmation.", "https://a.storyblok.com/f/171618/x/421b8ac6a3/tentative_festival_dates_2026.pdf"],
+        ["Jambay Lhakhang", "Bumthang", "A sacred site at the centre of the festival question. Jambay Lhakhang Singye Cham is listed for 24 November 2026, but the date is tentative and access needs reconfirmation.", "https://a.storyblok.com/f/171618/x/421b8ac6a3/tentative_festival_dates_2026.pdf"],
+        ["Nalakhar Tshechu", "Bumthang", "Listed for 24–26 November 2026 at Ngaa Lhakhang. It may be the more useful festival window if arrival is after 24 November; dates and access remain tentative.", "https://a.storyblok.com/f/171618/x/421b8ac6a3/tentative_festival_dates_2026.pdf"],
         ["Chumey weaving", "Bumthang", "A possible route into textiles, local knowledge and livelihood, provided a real host can be arranged.", "https://bhutan.travel/adventure_art"]
       ]
     },
     {
       id: "B",
-      name: "Living Landscape",
-      subtitle: "Ecology, Community & Wellbeing",
+      name: "Hybrid Bhutan",
+      subtitle: "Festival + Western Bhutan",
       image: "phobjikha",
-      core: "Build the journey around Phobjikha Valley, black-necked cranes, conservation, rural livelihoods and wellbeing. Bumthang can still appear, but Phobjikha is the emotional centre.",
-      duration: "8–10 days",
-      route: "Paro → Thimphu → Phobjikha → Punakha → Paro; Bumthang optional",
-      stay: "Two nights Thimphu · three Phobjikha · two Punakha · two Paro. Add Bumthang only with an extra night or a deliberate cut elsewhere.",
-      birthday: "Morning cranes and valley walking; a local or farmhouse lunch; a named community, conservation or landscape experience; then a quiet dinner and perhaps a hot-stone bath if available. The place does most of the decorating.",
+      birthdayLocation: "Bumthang",
+      core: "Make Bumthang the first emotional centre, then continue west for Phobjikha, Punakha and Paro. It gives the trip more landscape, birds, food and variety, but the road and hotel changes return after the festival. Mountains remain stubbornly three-dimensional.",
+      duration: "9–10 days",
+      route: "Paro → Thimphu → Bumthang → Phobjikha → Punakha → Paro",
+      stay: "Two nights Thimphu · three Bumthang · two Phobjikha or Punakha · one or two Paro. Confirm the order before adding every valley.",
+      birthday: "Keep 26 November in Bumthang too: festival or a quieter local day depending on the confirmed programme. Continue west only after the birthday, so the added landscapes do not eat the main reason for coming.",
       advantages: [
-        "Strongest ecology and conservation focus",
-        "Excellent fit for birds, wildlife and local livelihoods",
-        "Quiet, restorative birthday setting"
+        "Festival plus Phobjikha, Punakha and Paro",
+        "More nature, food and landscape after the birthday",
+        "Closest to the full Central + Western Bhutan picture"
       ],
       tradeoffs: [
-        "Bumthang → Phobjikha remains a demanding transfer",
-        "Festival experience may become shorter or secondary",
-        "Community encounters need advance arrangement"
+        "Longest route and more hotel changes",
+        "Bumthang → western Bhutan needs a realistic transfer plan",
+        "Higher cost and more opportunities for the schedule to wobble"
       ],
-      road: "Moderate to high · about 15–20 estimated road hours",
-      flight: "Potentially useful for Bumthang, but not mandatory; reconfirm before booking",
-      suited: "Travellers prioritising nature, birds, conservation, community and wellbeing.",
-      giveUp: "Some Bumthang cultural depth and some festival centrality.",
+      road: "Highest · the Central-to-Western transfer is the price of the encore",
+      flight: "Potential Paro → Bumthang flight can help; never treat it as guaranteed",
+      suited: "Travellers who want the festival first, then a wider Bhutan journey.",
+      giveUp: "Some unhurried Bumthang time, flexibility and probably some budget.",
       places: [
+        ["National Institute for Zorig Chusum", "Thimphu", "A useful place to see how traditional skills are taught and carried into modern livelihoods.", "https://bhutan.travel/adventure_art"],
+        ["Jambay Lhakhang", "Bumthang", "A sacred site at the centre of the festival question. Its listed 24 November 2026 date remains tentative and needs reconfirmation.", "https://a.storyblok.com/f/171618/x/421b8ac6a3/tentative_festival_dates_2026.pdf"],
         ["Black-necked Crane Education Centre", "Phobjikha", "An introduction to cranes, habitat, local culture and the practical work of conservation. Sightings remain wild and unguaranteed.", "https://rspnbhutan.org/programs-projects/species-and-habitats/black-necked-crane/"],
         ["Community-based sustainable tourism", "Phobjikha", "RSPN documents links between conservation, tourism and local livelihoods. A meeting is not automatic; ask for a named host.", "https://rspnbhutan.org/cbst-website-of-phobjikha-launched/"],
-        ["Gangtey Nature Trail", "Phobjikha", "A way to read the valley at walking pace, with farming and habitat sharing the same landscape.", "https://bhutan.travel/"]
-      ]
-    },
-    {
-      id: "C",
-      name: "Rooted & Slow",
-      subtitle: "Craft, Farms, Food & Everyday Bhutan",
-      image: "punakha",
-      core: "Do not go to Bumthang. Use the time saved for craft, farms, food, villages and ordinary life in Western Bhutan. This is a deliberate choice: depth instead of distance.",
-      duration: "7–9 days",
-      route: "Paro → Thimphu → Punakha → Phobjikha → Paro",
-      stay: "Two nights Thimphu · three Punakha · two Phobjikha · two Paro. For 7–8 days, remove a valley rather than create one-night stops.",
-      birthday: "A village or farm experience, local food, perhaps cooking, a little landscape time and a warm private meal with friends. Less scheduled entertainment; more chance of enjoying the actual day.",
-      advantages: [
-        "Least rushed and fewest major transfers",
-        "More room for hands-on craft, farms and community time",
-        "Most realistic route near the original 6–7 day idea"
-      ],
-      tradeoffs: [
-        "No Bumthang and no Bumthang festival experience",
-        "Less Central Bhutan and less geographic range",
-        "The saving is time, not a fuller map"
-      ],
-      road: "Lowest · about 11–14 estimated road hours",
-      flight: "Not required",
-      suited: "Travellers who value slow travel, food, crafts, farming, flexibility and less time in vehicles.",
-      giveUp: "Bumthang and its festivals. In return, we gain time.",
-      places: [
-        ["National Institute for Zorig Chusum", "Thimphu", "A useful starting point for asking how craft knowledge is taught. A hands-on session needs separate confirmation.", "https://bhutan.travel/adventure_art"],
         ["Punakha Valley", "Punakha", "A valley where farms, food, sacred places and everyday movement can sit in the same day.", "https://bhutan.travel/"],
-        ["Chimi Lhakhang Village Homestay", "Punakha", "A registered homestay listing that describes paddy-farming context, village interaction and traditional cooking. Ask the operator to confirm availability and whether it suits a birthday day.", "https://services.bhutan.travel/search/homestay/chimi-lhakhang-village-homestay"]
+        ["Tiger’s Nest", "Paro", "Taktsang adds a physically demanding but culturally important final day; weather, trail conditions and guide timing need confirmation.", "https://bhutan.travel/"]
       ]
     }
   ];
 
   const BIRTHDAYS = [
-    { title: "Bumthang", subtitle: "Living traditions", image: "festival", text: "Start with a slow morning and a pre-arranged cultural, craft or community visit rather than racing between monuments. The current official 2026 calendar lists Nalakhar Tshechu for 24–26 November and Jambay Lhakhang Singye Cham for 24 November, but both dates are tentative and festival access needs reconfirmation. If the arrangement works, the day can continue with local food, time to wander and a private dinner with friends. Culture first; cake, if invited, later.", route: "Living Culture" },
-    { title: "Phobjikha", subtitle: "Quiet landscape", image: "cranes", text: "Begin with a chance to look for wintering black-necked cranes in the valley, and visit the Black-necked Crane Education Centre if open. The wetland is shared with farming and livestock livelihoods, so a named conservation or community conversation could give the landscape some human depth, but it must be arranged and is not an automatic RSPN meeting. Then comes a local or farmhouse lunch, quiet time, dinner and perhaps a hot-stone bath if available. The cranes are wild, which is considerate of them but inconvenient for birthday logistics.", route: "Living Landscape" },
-    { title: "Punakha", subtitle: "Around the table", image: "punakha", text: "Begin with a named farm or village host. One real lead to ask about is Chimi Lhakhang Village Homestay, whose official listing describes paddy-farming context, village interaction and traditional cooking; availability and fit for a birthday day still need confirmation. Lunch can become part of the experience rather than a pause between attractions, followed by a little landscape, craft or riverside time and an unhurried evening meal. It is the least theatrical version, which may be exactly why it feels most like a birthday.", route: "Rooted & Slow" }
+    { title: "Jambay Lhakhang Singye Cham", subtitle: "24 November · one-day festival window", image: "jambay", text: "A specific sacred event at Jambay Lhakhang. This is the tighter arrival choice: the group needs to be in Bumthang in time for the 24 November programme, then shape 26 November as a quieter birthday day with local food and a private dinner.", route: "Festival choice 1" },
+    { title: "Nalakhar Tshechu", subtitle: "24–26 November · the birthday inside the festival", image: "nalakhar", text: "A three-day village tshechu at Ngaa Lhakhang, where local families and visitors gather in their finest dress for sacred dances, prayers and a shared valley occasion. Because it runs through 26 November, the birthday can sit inside Bumthang’s celebration rather than arrive after it — with time for a proper meal and a private toast around the confirmed programme.", route: "Festival choice 2" }
   ];
 
   function escapeHTML(value) {
@@ -152,7 +110,7 @@
   }
 
   function routeCard(route) {
-    const birthdayLocation = route.id === "A" ? "Bumthang" : route.id === "B" ? "Phobjikha" : "Punakha";
+    const birthdayLocation = route.birthdayLocation;
     return `<article class="route-card route-card-${route.id.toLowerCase()}" data-route-card="${route.id}">
       ${imageFigure(route.image, "route-image")}
       <div class="route-card-body">
@@ -212,14 +170,13 @@
     const route = ROUTES.find((item) => item.id === choice.id);
     drawer.hidden = false;
     document.getElementById("choice-title").textContent = `Option ${route.id} · ${route.name}`;
-    document.getElementById("choice-summary").textContent = `Birthday: ${route.id === "A" ? "Bumthang" : route.id === "B" ? "Phobjikha" : "Punakha"}. Your note is temporary and stays on this page until you copy it.`;
+    document.getElementById("choice-summary").textContent = `Birthday: ${route.birthdayLocation}. Your note is temporary and stays on this page until you copy it.`;
     document.getElementById("choice-note").value = choice.note;
   }
 
   function choiceText() {
     const route = ROUTES.find((item) => item.id === choice.id);
-    const birthday = choice.id === "A" ? "Bumthang" : choice.id === "B" ? "Phobjikha" : "Punakha";
-    return `My choice: ${route.name}\nBirthday: ${birthday}\nI like it because: ${choice.note.trim() || "I would like to discuss this route first."}`;
+    return `My choice: ${route.name}\nBirthday: ${route.birthdayLocation}\nI like it because: ${choice.note.trim() || "I would like to discuss this route first."}`;
   }
 
   async function copyChoice() {
@@ -316,24 +273,39 @@
     const message = document.getElementById("access-message");
     if (!gate || !shell || !form || !input || !message) return;
 
+    const setAccessCookie = () => {
+      const secure = window.location.protocol === "https:" ? "; Secure" : "";
+      document.cookie = `${ACCESS_SESSION_KEY}=granted; Max-Age=${ACCESS_COOKIE_MAX_AGE}; Path=/; SameSite=Lax${secure}`;
+    };
+
+    const hasAccessCookie = () => document.cookie
+      .split(";")
+      .some((cookie) => cookie.trim() === `${ACCESS_SESSION_KEY}=granted`);
+
     const openProposal = () => {
       if (input.value !== ACCESS_PASSWORD) {
         message.hidden = false;
         input.select();
         return;
       }
+      try { setAccessCookie(); } catch {}
       try { sessionStorage.setItem(ACCESS_SESSION_KEY, "granted"); } catch {}
       gate.hidden = true;
       shell.hidden = false;
     };
 
-    try {
-      if (sessionStorage.getItem(ACCESS_SESSION_KEY) === "granted") {
-        gate.hidden = true;
-        shell.hidden = false;
-        return;
+    let cookieGranted = false;
+    let sessionGranted = false;
+    try { cookieGranted = hasAccessCookie(); } catch {}
+    try { sessionGranted = sessionStorage.getItem(ACCESS_SESSION_KEY) === "granted"; } catch {}
+    if (cookieGranted || sessionGranted) {
+      if (!cookieGranted) {
+        try { setAccessCookie(); } catch {}
       }
-    } catch {}
+      gate.hidden = true;
+      shell.hidden = false;
+      return;
+    }
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -354,8 +326,10 @@
 
   setupAccessGate();
   keepZoomCheckInsideViewport();
-  renderRoutes();
-  renderBirthdays();
-  setupChoice();
+  if (document.getElementById("route-grid")) {
+    renderRoutes();
+    renderBirthdays();
+    setupChoice();
+  }
   setupCostControls();
 })();
