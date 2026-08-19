@@ -8,8 +8,9 @@
       content="A short visual proposal comparing two festival-led ways to experience Bhutan in November 2026."
     />
     <title>Bhutan 2026 | Two Festival-Led Journeys</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="app.js"></script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=20260819-10" />
+    <script defer src="app.js?v=20260819-9"></script>
   </head>
   <body>
     <div class="access-gate" id="access-gate">
@@ -39,12 +40,10 @@
             <span class="wordmark-subtitle">A birthday journey brief</span>
           </span>
         </a>
-        <nav class="primary-nav" aria-label="Primary navigation">
-            <a href="#routes">The two routes</a>
+        <nav class="primary-nav" aria-label="Journey pages">
+          <a href="index.html#routes" aria-current="page">Route options</a>
           <a href="flights.html">Flights from KIX</a>
-          <a href="#birthday">26 November</a>
-          <a href="#costs">Costs</a>
-          <a href="#sources">Sources</a>
+          <a href="agencies.html">Agency reviews</a>
         </nav>
       </div>
     </header>
@@ -68,14 +67,15 @@
         </div>
         <div class="container hero-content">
           <div class="hero-copy">
-            <p class="eyebrow eyebrow-light">A festival-led birthday journey for 3–6 travellers</p>
+            <p class="eyebrow eyebrow-light">A festival-led birthday journey for 3–4 travellers</p>
             <h1 id="hero-title">Two ways to make Bumthang the centre of Bhutan.</h1>
             <p class="hero-deck">Both versions keep 26 November in Bumthang and treat the festival as the reason to travel farther. The choice is whether we stay close to Central Bhutan or continue west afterwards.</p>
             <a class="button button-light" href="#routes">Compare the two routes</a>
           </div>
           <dl class="hero-facts" aria-label="Trip facts">
-            <div><dt>Planning update</dt><dd>16 August 2026</dd></div>
-            <div><dt>Travel window</dt><dd>22 November – early December 2026</dd></div>
+            <div><dt>Planning update</dt><dd>19 August 2026 · latest operator document checked</dd></div>
+            <div><dt>Bhutan dates</dt><dd>23 November – 1 December 2026</dd></div>
+            <div><dt>Working flights</dt><dd>Arrive Paro 23 Nov at 09:35 · depart 1 Dec at 16:20</dd></div>
             <div><dt>Birthday</dt><dd>26 November 2026 · Bumthang in both versions</dd></div>
           </dl>
         </div>
@@ -99,11 +99,27 @@
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">The two routes worth discussing now</p>
-              <h2 id="routes-title">Festival first. Then decide how far to carry on.</h2>
+              <p class="eyebrow">The Bumthang decision</p>
+              <h2 id="routes-title">Two detailed proposals. One festival centre.</h2>
             </div>
-            <p class="section-heading-note">Both routes start with festival-led Central Bhutan. The difference is what happens after Bumthang. These are planning revisions based on the proposals already in hand, not confirmed quotations.</p>
+            <p class="section-heading-note">These are the two nine-day documents we can compare directly: 23 November–1 December, with 26 November in Bumthang. The question is not which operator wins; it is how much festival time, western Bhutan and hotel movement we actually want.</p>
           </div>
+          <div class="place-key" aria-label="Place colour key">
+            <span class="place-key-title">Place colour key</span>
+            <span class="place-key-item"><span class="place-name place-paro">Paro</span></span>
+            <span class="place-key-item"><span class="place-name place-thimphu">Thimphu</span></span>
+            <span class="place-key-item"><span class="place-name place-bumthang">Bumthang</span></span>
+            <span class="place-key-item"><span class="place-name place-punakha">Punakha</span></span>
+            <span class="place-key-item"><span class="place-name place-phobjikha">Phobjikha</span></span>
+          </div>
+          <div class="route-comparison" id="route-comparison"></div>
+          <div class="route-price-table" id="route-price-table"></div>
+          <div class="hotel-comparison-heading">
+            <p class="eyebrow">Eight hotel nights</p>
+            <h3>Where the nights actually go</h3>
+            <p>Both proposals cover nine calendar days and eight hotel nights. The table makes the fragmentation visible; the hotel links are research leads, not confirmation that these exact properties are booked.</p>
+          </div>
+          <div class="hotel-comparison" id="hotel-comparison"></div>
           <div class="route-grid" id="route-grid"></div>
           <section class="choice-drawer" id="choice-drawer" aria-labelledby="choice-title" hidden>
             <div>
@@ -134,7 +150,7 @@
               <p class="section-heading-note">The route decision comes first. Inside either route, these are the two festival windows that shape the Bumthang stay.</p>
           </div>
           <div class="birthday-introduction">
-            <p><strong>Both routes keep 26 November in Bumthang.</strong> The festival choice is a separate question: arrive in time for Jambay’s one-day Singye Cham, or build around Nalakhar’s three-day window, which includes the birthday itself.</p>
+            <p><strong>Both routes keep 26 November in Bumthang.</strong> The published calendar lists Jambay Lhakhang Singye Cham on 24 November and Nalakhar Tshechu on 24–26 November. These are planning windows only; the exact programme, visitor access and transport remain unconfirmed.</p>
             <p class="birthday-reference">Both dates come from Bhutan Travel’s tentative 2026 calendar, updated in April 2025. Reconfirm the exact programme, access and transport before booking.</p>
           </div>
           <div class="birthday-list" id="birthday-list"></div>
@@ -150,7 +166,7 @@
             </div>
             <p class="section-heading-note">The two routes above are the choices. The operator comes afterwards: we ask suitable tour agencies whether they can customise the route and quote it properly.</p>
           </div>
-          <div class="cost-decision" aria-label="How to use the cost section">
+          <div class="cost-decision">
             <div class="cost-decision-block">
               <p class="eyebrow eyebrow-light">What we choose</p>
               <h3>One or two routes above</h3>
@@ -159,7 +175,7 @@
             <div class="cost-decision-block">
               <p class="eyebrow eyebrow-light">What happens next</p>
               <h3>Ask suitable operators to customise it</h3>
-              <p>The two proposals below are simply the starting material already in hand, not a closed list. Ask these or other suitable tour agencies whether they can deliver the chosen route.</p>
+              <p>The proposals below are starting material, not a closed list. Choose the Bumthang shape first; then ask suitable tour agencies whether they can customise and quote it properly.</p>
             </div>
           </div>
           <div class="cost-reference-heading">
@@ -167,41 +183,44 @@
             <p>These are existing proposal details, not extra routes to choose.</p>
           </div>
           <div class="cost-list">
-            <div class="cost-row"><strong>Excursion to Himalayas<br><small>Existing proposal · historical quote</small></strong><span>2 or 4 travellers</span><small>Exact figures shown below · reference only</small></div>
-            <div class="cost-row"><strong>Bhutan Travel Bureau<br><small>Existing proposal</small></strong><span>Awaiting quote</span><small>No confirmed quotation supplied.</small></div>
+            <div class="cost-row cost-row-latest"><strong>Excursion to Himalayas<br><small>Latest proposal · 9 days / 8 nights</small></strong><span>USD 4,620 / USD 8,400 total</span><small>2 travellers: USD 4,620 · 4 travellers: USD 8,400. SDF, GST and visa are already included; exact structure shown below.</small></div>
+            <div class="cost-row"><strong>Earlier reference<br><small>6-night proposal</small></strong><span>USD 1,742.50 / USD 1,585 pp</span><small>Historical context only · not a price for the current 9-day route.</small></div>
+            <div class="cost-row"><strong>Bhutan Mystical Tours &amp; Adventures<br><small>New nine-day proposal</small></strong><span>Total not supplied</span><small>SDF can be shown separately as a common baseline, but the quote does not state its inclusion, the full package total, its unit basis, GST, visa, domestic flight or the full list of inclusions.</small></div>
+            <div class="cost-row"><strong>Bhutan Travel Bureau<br><small>Ten-day outline</small></strong><span>Awaiting quote</span><small>No confirmed quotation supplied; dates are not yet aligned to the 23 November arrival.</small></div>
+            <div class="cost-row"><strong>Go Bhutan Tours<br><small>Initial reply only</small></strong><span>Awaiting itinerary</span><small>No route or quotation supplied yet.</small></div>
           </div>
-          <div class="cost-breakdown" aria-labelledby="breakdown-title">
+          <div class="cost-breakdown">
             <div class="cost-breakdown-heading">
               <div class="cost-breakdown-copy">
-                <p class="eyebrow eyebrow-light">Existing quote · 6 nights</p>
-                <h3 id="breakdown-title">Historical quote</h3>
-                <p>SDF, GST and visa fees are included in these totals.</p>
+                <p class="eyebrow eyebrow-light">Latest operator proposal · 9 days / 8 nights</p>
+                <h3 id="breakdown-title">Current quote structure</h3>
+                <p>23 November–1 December. SDF, GST and visa fees are included in these totals.</p>
               </div>
-              <div class="cost-breakdown-controls" role="group" aria-label="Choose Company #1 quote headcount">
+              <div class="cost-breakdown-controls" role="group" aria-label="Choose the latest proposal headcount">
                 <span>Headcount</span>
                 <button class="button button-light cost-pax-button" type="button" data-cost-pax="2" aria-pressed="false">2 travellers</button>
                 <button class="button button-light cost-pax-button" type="button" data-cost-pax="4" aria-pressed="true">4 travellers</button>
               </div>
             </div>
             <div class="cost-breakdown-panel" data-cost-breakdown-panel="2" hidden>
-              <div class="cost-breakdown-panel-heading"><div><h4>Excursion to Himalayas · Company #1</h4><p>Existing proposal · historical reference</p></div><strong>2 travellers · 6 nights</strong><p>USD 1,742.50 per person</p></div>
+              <div class="cost-breakdown-panel-heading"><div><h4>Excursion to Himalayas</h4><p>Latest operator proposal · 23 November–1 December</p></div><strong>2 travellers · 8 nights</strong><p>USD 2,310 per person</p></div>
               <div class="cost-breakdown-list">
-                <div><strong>Tour component</strong><span>USD 2,100</span><small>Source: Company #1’s proposal · USD 175 × 2 travellers × 6 nights</small></div>
-                <div><strong>GST</strong><span>USD 105</span><small>Source: Company #1’s proposal · 5% Goods and Services Tax</small></div>
-                <div><strong>SDF</strong><span>USD 1,200</span><small>Source: Company #1’s proposal · USD 100 × 2 travellers × 6 nights · already included</small></div>
-                <div><strong>Visa fees</strong><span>USD 80</span><small>Source: Company #1’s proposal · USD 40 × 2 travellers · already included</small></div>
+                <div><strong>Tour component</strong><span>USD 2,800</span><small>Source: latest operator document · USD 175 × 2 travellers × 8 nights</small></div>
+                <div><strong>GST</strong><span>USD 140</span><small>Source: latest operator document · 5% Goods and Services Tax</small></div>
+                <div><strong>SDF</strong><span>USD 1,600</span><small>Source: latest operator document · USD 100 × 2 travellers × 8 nights · already included</small></div>
+                <div><strong>Visa fees</strong><span>USD 80</span><small>Source: latest operator document · USD 40 × 2 travellers · already included</small></div>
               </div>
-              <div class="cost-breakdown-total"><strong>Total</strong><span>USD 3,485</span><small>USD 1,742.50 per person · Source: Company #1’s proposal</small></div>
+              <div class="cost-breakdown-total"><strong>Total</strong><span>USD 4,620</span><small>USD 2,310 per person · latest operator document</small></div>
             </div>
             <div class="cost-breakdown-panel" data-cost-breakdown-panel="4">
-              <div class="cost-breakdown-panel-heading"><div><h4>Excursion to Himalayas · Company #1</h4><p>Existing proposal · historical reference</p></div><strong>4 travellers · 6 nights</strong><p>USD 1,585 per person</p></div>
+              <div class="cost-breakdown-panel-heading"><div><h4>Excursion to Himalayas</h4><p>Latest operator proposal · 23 November–1 December</p></div><strong>4 travellers · 8 nights</strong><p>USD 2,100 per person</p></div>
               <div class="cost-breakdown-list">
-                <div><strong>Tour component</strong><span>USD 3,600</span><small>Source: Company #1’s proposal · USD 150 × 4 travellers × 6 nights</small></div>
-                <div><strong>GST</strong><span>USD 180</span><small>Source: Company #1’s proposal · 5% Goods and Services Tax</small></div>
-                <div><strong>SDF</strong><span>USD 2,400</span><small>Source: Company #1’s proposal · USD 100 × 4 travellers × 6 nights · already included</small></div>
-                <div><strong>Visa fees</strong><span>USD 160</span><small>Source: Company #1’s proposal · USD 40 × 4 travellers · already included</small></div>
+                <div><strong>Tour component</strong><span>USD 4,800</span><small>Source: latest operator document · USD 150 × 4 travellers × 8 nights</small></div>
+                <div><strong>GST</strong><span>USD 240</span><small>Source: latest operator document · 5% Goods and Services Tax</small></div>
+                <div><strong>SDF</strong><span>USD 3,200</span><small>Source: latest operator document · USD 100 × 4 travellers × 8 nights · already included</small></div>
+                <div><strong>Visa fees</strong><span>USD 160</span><small>Source: latest operator document · USD 40 × 4 travellers · already included</small></div>
               </div>
-              <div class="cost-breakdown-total"><strong>Total</strong><span>USD 6,340</span><small>USD 1,585 per person · Source: Company #1’s proposal</small></div>
+              <div class="cost-breakdown-total"><strong>Total</strong><span>USD 8,400</span><small>USD 2,100 per person · latest operator document</small></div>
             </div>
           </div>
           <div class="cost-next-step">
@@ -209,9 +228,10 @@
             <p>Choose one or two routes above, then send the same brief to suitable operators. Ask whether they can customise the route, keep 26 November free from a long transfer, and quote it for the actual group size. Compare what they can genuinely deliver; this page will not invent a total.</p>
           </div>
           <div class="cost-note">
-            <p><strong>Company #1’s reference quote includes:</strong> accommodation, meals, ground transport, guide, stated sightseeing and entrance fees, SDF, visa fee and stated government charges.</p>
-            <p><strong>For any new operator quote:</strong> ask for SDF, visa fee, GST, accommodation, meals, guide, transport, entrance fees and any domestic flight to be listed separately. SDF is likely to be included in a package quote, but it must be confirmed rather than assumed.</p>
-            <p><strong>Not included in Company #1’s reference:</strong> international airfare, Drukair / Bhutan flight airfare unless separately quoted, insurance, personal expenses and unspecified services.</p>
+            <p><strong>The latest proposal includes in its stated total:</strong> tour component, GST, SDF and visa fees. The detailed inclusions for accommodation, meals, guide, ground transport and entrance fees should be reconfirmed in the revised quotation.</p>
+            <p><strong>Separate operator-supplied flight references:</strong> Bangkok–Paro–Bangkok at USD 971 and Paro–Bumthang–Paro at USD 408 per person, both subject to change and not silently added to the tour total.</p>
+            <p><strong>For any new operator quote:</strong> ask for SDF, visa fee, GST, accommodation, meals, guide, transport, entrance fees and any domestic flight to be listed separately. The standard adult SDF can be the same baseline across operators, but inclusion in the package total must still be confirmed.</p>
+            <p><strong>Still outside the tour total unless confirmed:</strong> international airfare, Drukair / Bhutan flight airfare, insurance, personal expenses and unspecified services.</p>
           </div>
           <div class="cost-research">
             <div class="cost-research-intro">
@@ -221,10 +241,10 @@
             </div>
             <div class="cost-nights-control">
               <div class="cost-nights-input">
-                <label for="chargeable-nights">Chargeable nights <output id="chargeable-nights-output" for="chargeable-nights">6 nights</output></label>
+                <label for="chargeable-nights">Chargeable nights <output id="chargeable-nights-output" for="chargeable-nights">8 nights</output></label>
                 <div class="nights-slider-row">
                   <div class="nights-range-wrap">
-                    <input id="chargeable-nights" type="range" min="6" max="12" value="6" step="1" aria-describedby="cost-nights-note">
+                    <input id="chargeable-nights" type="range" min="6" max="12" value="8" step="1" aria-describedby="cost-nights-note">
                     <div class="nights-labels" aria-hidden="true"><span>6</span><span>9</span><span>12</span></div>
                   </div>
                   <div class="nights-stepper" role="group" aria-label="Adjust chargeable nights">
@@ -234,13 +254,13 @@
                 </div>
                 <p id="cost-nights-note">Per traveller · standard adult rates · reconfirm before booking. <a class="text-link text-link-light" href="https://bhutan.travel/visa" target="_blank" rel="noopener noreferrer">Source: Bhutan Travel visa and SDF guidance</a>.</p>
               </div>
-              <div class="cost-nights-results" aria-live="polite" aria-label="Mandatory planning baseline per traveller">
-                <div><strong id="sdf-total">USD 600</strong><span>SDF</span><small id="sdf-formula">USD 100 × 6 nights</small></div>
+              <div class="cost-nights-results" aria-live="polite">
+                <div><strong id="sdf-total">USD 800</strong><span>SDF</span><small id="sdf-formula">USD 100 × 8 nights</small></div>
                 <div><strong>USD 40</strong><span>Visa fee</span><small>One-off fee per traveller</small></div>
-                <div class="cost-nights-total"><strong id="mandatory-total">USD 640</strong><span>SDF + visa</span><small>Mandatory baseline per traveller</small></div>
+                <div class="cost-nights-total"><strong id="mandatory-total">USD 840</strong><span>SDF + visa</span><small>Mandatory baseline per traveller</small></div>
               </div>
             </div>
-            <p class="cost-research-note">Accommodation, meals, guide, vehicle, entrance fees, GST, domestic flights and personal spending still need to be priced by the operator. Do not add this baseline to Company #1’s reference total: SDF and visa are already included there.</p>
+            <p class="cost-research-note">Accommodation, meals, guide, vehicle, entrance fees, GST, domestic flights and personal spending still need to be priced by the operator. Do not add this baseline to Company #1’s stated total: its SDF and visa are already included. For Company #4, keep the SDF line separate until the operator confirms whether it is included.</p>
           </div>
         </div>
       </section>
@@ -252,12 +272,14 @@
               <p class="eyebrow">The operator context</p>
               <h2 id="operators-title">The route comes first. The operator comes second.</h2>
             </div>
-            <p class="section-heading-note">These are the two proposals already in hand, not a shortlist carved in stone. The useful question is who can customise the chosen route properly.</p>
+            <p class="section-heading-note">These are operator leads, not choices. The useful question is who can customise the chosen Bumthang route properly, including the birthday day and any real hosted stay.</p>
           </div>
           <div class="operator-list">
-            <article class="operator-row"><p class="eyebrow">Existing proposal</p><div><h3>Excursion to Himalayas</h3><p>Closest geographical starting point for the hybrid route’s western half: Thimphu, Punakha, Phobjikha and Paro. Its existing proposal includes useful leads for crafts, farms, community and wellbeing, but the original 26 November plan places approximately 6–7 hours of travel from Phobjikha to Paro before cake. That needs redesigning.</p><a class="text-link" href="https://excursiontohimalaya.com/" target="_blank" rel="noopener noreferrer">Open operator site</a></div></article>
-            <article class="operator-row"><p class="eyebrow">Existing proposal</p><div><h3>Bhutan Travel Bureau</h3><p>Closest geographical starting point for the Bumthang-led route: its tentative ten-day proposal already reaches Gangtey, Bumthang, Punakha and Paro. The quote is still awaiting, and the festival-day alignment needs confirmation against the 24–26 November dates.</p><a class="text-link" href="https://services.bhutan.travel/search/tour-operator/bhutan-travel-bureau" target="_blank" rel="noopener noreferrer">Open operator listing</a></div></article>
-            <article class="operator-row"><p class="eyebrow">Wider search</p><div><h3>Other suitable tour agencies</h3><p>If the chosen route needs a different fit, ask another licensed Bhutanese operator or specialist agency the same question: can you customise this route, keep the birthday day intact, and name the people and places involved? The two existing proposals are useful starting points, not the boundary of the search.</p></div></article>
+            <article class="operator-row"><p class="eyebrow">Detailed nine-day proposal</p><div><h3>Excursion to Himalayas · Company #1</h3><p><strong>Operator proposal:</strong> 23 November–1 December, with Thimphu on the 24th, a Paro → Bumthang flight on the 25th, a festival and birthday day on the 26th, then Bumthang → Paro by flight and a 4–5 hour road transfer to Punakha on the 27th. Phobjikha follows on the 28th, Paro on the 29th and Tiger’s Nest on the 30th.</p><p><strong>Our reading:</strong> The structure is workable, but the document calls 26 November “Jambay Lhakhang Drup Festival”. The official tentative 2026 calendar instead lists Jambay Lhakhang Drup on 26–29 October, Jambay Lhakhang Singye Cham on 24 November and Nalakhar Tshechu on 24–26 November. We would keep the birthday in Bumthang, ask the operator to name the exact event, and make the 27th flight-and-road timing explicit before sending it back for revision. The full day-by-day detail remains in the <a class="text-link" href="https://docs.google.com/document/d/1RgobzuirAuhbDoD43gQGt3lNikxlalSpgyCPlA-0f3o/edit?tab=t.0" target="_blank" rel="noopener noreferrer">read-only planning document</a>.</p><a class="text-link" href="https://excursiontohimalaya.com/" target="_blank" rel="noopener noreferrer">Open operator site</a></div></article>
+            <article class="operator-row"><p class="eyebrow">Personal nine-day proposal</p><div><h3>Bhutan Mystical Tours &amp; Adventures · Company #4</h3><p>Arrive 23 November and reach Bumthang on the 24th, then keep 24–26 November around the festivals and birthday before continuing west. The family-style birthday dinner is a hosted meal, not a confirmed homestay. The 24 November domestic flight is the sensible version if Jambay matters; the proposed 9–10 hour road transfer would consume much of the festival day.</p><a class="text-link" href="https://bhutanmystical.com/" target="_blank" rel="noopener noreferrer">Open operator site</a></div></article>
+            <article class="operator-row"><p class="eyebrow">Ten-day outline</p><div><h3>Bhutan Travel Bureau · Company #2</h3><p>Its route includes Gangtey, Bumthang, Punakha, a proposed Punakha homestay and Paro. With a 23 November arrival, however, its Day 5 festival visit would fall on 27 November, after both listed festival windows. It needs a dated revision before it can be compared fairly.</p><a class="text-link" href="https://services.bhutan.travel/search/tour-operator/bhutan-travel-bureau" target="_blank" rel="noopener noreferrer">Open operator listing</a></div></article>
+            <article class="operator-row"><p class="eyebrow">Initial reply only</p><div><h3>Go Bhutan Tours · Company #3</h3><p>A sales contact has replied, but no itinerary or quotation is in the latest planning document. Keep it in the comparison, but do not infer a route from its general marketing material.</p><a class="text-link" href="https://www.gobhutantours.com/" target="_blank" rel="noopener noreferrer">Open operator site</a></div></article>
+            <article class="operator-row"><p class="eyebrow">Optional wider search</p><div><h3>Other agencies to keep in view</h3><p>There may be no need to add another operator. If the chosen route needs a different fit, these are simply further licensed Bhutanese leads to check against the same brief: can they customise the route, keep 26 November free from a long transfer, and name the people and places involved?</p></div></article>
           </div>
         </div>
       </section>

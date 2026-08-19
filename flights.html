@@ -8,8 +8,9 @@
       content="Flight options from Kansai International Airport to Bhutan for November 2026."
     />
     <title>Bhutan 2026 | Flights from Japan</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="app.js"></script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=20260819-10" />
+    <script defer src="app.js?v=20260819-9"></script>
   </head>
   <body class="flight-page">
     <div class="access-gate" id="access-gate">
@@ -20,7 +21,7 @@
         <p class="access-note">This device will remember access for 30 days.</p>
         <form id="access-form">
           <label for="access-password">Password</label>
-          <input id="access-password" type="password" inputmode="numeric" autocomplete="current-password" maxlength="6" required />
+          <input id="access-password" type="password" inputmode="numeric" autocomplete="off" maxlength="6" required />
           <button class="button button-dark" type="submit">Open flight options</button>
           <p class="access-message" id="access-message" role="alert" hidden>That password was not quite right. Try again.</p>
         </form>
@@ -36,15 +37,13 @@
             <span class="wordmark-mark">B</span>
             <span>
               <span class="wordmark-title">Bhutan 2026</span>
-              <span class="wordmark-subtitle">Flights from Japan</span>
+              <span class="wordmark-subtitle">A birthday journey brief</span>
             </span>
           </a>
-          <nav class="primary-nav" aria-label="Primary navigation">
-            <a href="index.html#routes">The two routes</a>
+          <nav class="primary-nav" aria-label="Journey pages">
+            <a href="index.html#routes">Route options</a>
             <a href="flights.html" aria-current="page">Flights from KIX</a>
-            <a href="index.html#birthday">26 November</a>
-            <a href="index.html#costs">Costs</a>
-            <a href="index.html#sources">Sources</a>
+            <a href="agencies.html">Agency reviews</a>
           </nav>
         </div>
       </header>
@@ -55,12 +54,13 @@
             <div>
               <p class="eyebrow eyebrow-light">Flights from Japan · KIX</p>
               <h1 id="flight-title">Getting to Bhutan<br />from Kansai.</h1>
-              <p class="flight-hero-deck">Every option starts with the same first leg: Kameoka → Kansai International Airport → Bangkok or Singapore → Paro, with some services making an intermediate stop in India.</p>
+              <p class="flight-hero-deck">The current working plan is Japan → Bangkok on 22 November, Paro on the morning of the 23rd, and home via Bangkok after leaving Bhutan on 1 December.</p>
             </div>
             <dl class="flight-hero-facts" aria-label="Flight planning facts">
-              <div><dt>Travel window</dt><dd>22 November – early December 2026</dd></div>
+              <div><dt>Door-to-door dates</dt><dd>22 November – 2 December 2026</dd></div>
+              <div><dt>Time in Bhutan</dt><dd>23 November 09:35 – 1 December 16:20</dd></div>
               <div><dt>Birthday</dt><dd>26 November · keep the birthday itself free from a long transfer</dd></div>
-              <div><dt>Planning rule</dt><dd>For a 22 November Paro arrival, plan to leave KIX on 21 November and sleep at the gateway.</dd></div>
+              <div><dt>Working gateway</dt><dd>Bangkok · connect overnight, then use Drukair KB141 on 23 November</dd></div>
             </dl>
           </div>
         </section>
@@ -83,7 +83,7 @@
               <span class="airport-key-item"><span class="airport airport-ccu">CCU</span><span>Kolkata</span></span>
               <span class="airport-key-item"><span class="airport airport-gay">GAY</span><span>Gaya</span></span>
             </div>
-            <p class="flight-start-note">The Bhutan sectors below are published planning patterns. KIX fares and exact timings are date-specific; they need to be checked together with the gateway connection rather than treated as a separate afterthought.</p>
+            <p class="flight-start-note"><strong>Current working chain:</strong> reach Bangkok on 22 November → Drukair KB141 to Paro on 23 November, 06:00–09:35 → Drukair KB152 back to Bangkok on 1 December, 16:20–20:30 → onward Japan flight after midnight on 2 December. These are current planning flights, not bookings.</p>
           </div>
         </section>
 
@@ -92,7 +92,7 @@
             <div class="section-heading flight-section-heading">
               <div>
                 <p class="eyebrow">Flight options</p>
-                <h2 id="flight-options-title">Two gateways worth pricing first.</h2>
+                <h2 id="flight-options-title">Bangkok first. Singapore only if the dates move.</h2>
               </div>
               <p class="section-heading-note">These are schedule choices, not bookings. Leave room for immigration, baggage and the occasional airline decision to become a character in the story.</p>
             </div>
@@ -106,24 +106,31 @@
                 </div>
 
                 <div class="flight-alert">
-                  <strong>For a 22 November arrival:</strong>
-                  <span>Leave KIX on 21 November and overnight in Bangkok. A same-day self-transfer into an early Paro flight is not a sensible default.</span>
+                  <strong>Working itinerary · 23 November arrival:</strong>
+                  <span>Reach Bangkok on 22 November. The overnight connection leaves a useful buffer before the 06:00 Drukair departure, but separate tickets still need careful baggage and disruption planning.</span>
                 </div>
 
-                <section class="flight-option-section" aria-labelledby="bangkok-arrivals-title">
-                  <h4 id="bangkok-arrivals-title">Bangkok → Paro · 22 November working arrival</h4>
-                  <p class="flight-schedule-note"><strong>Working assumption:</strong> arrive in Paro on Sunday 22 November. The later dates are fallback patterns only; they shorten the Bhutan stay and bring arrival closer to the birthday.</p>
+                <section class="flight-option-section" aria-labelledby="bangkok-kix-title">
+                  <h4 id="bangkok-kix-title">KIX → Bangkok · first international leg</h4>
+                  <p class="flight-schedule-note"><strong>Outbound target:</strong> Sun 22 Nov, reaching Bangkok before the early flight to Bhutan on Monday 23 Nov.</p>
                   <ol class="flight-leg-list">
-                    <li class="flight-leg"><div><span>Sun 22 Nov · Drukair</span><strong>KB153</strong></div><div><strong><span class="airport airport-bkk">BKK</span> 06:00 → <span class="airport airport-pbh">PBH</span> 08:15</strong><small>Direct</small></div></li>
-                    <li class="flight-leg flight-leg-fallback"><div><span>Fallback · Mon 23 Nov · Drukair</span><strong>KB141</strong></div><div><strong class="flight-route"><span class="airport airport-bkk">BKK</span> 06:00 <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-gau">GAU</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-pbh">PBH</span> 09:35</strong><small>Intermediate stop · Guwahati, India</small></div></li>
-                    <li class="flight-leg flight-leg-fallback"><div><span>Fallback · Tue 24 Nov · Drukair</span><strong>KB131</strong></div><div><strong class="flight-route"><span class="airport airport-bkk">BKK</span> 07:30 <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-ixb">IXB</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-pbh">PBH</span> 11:00</strong><small>Intermediate stop · Bagdogra, India</small></div></li>
-                    <li class="flight-leg"><div><span>Sun / Mon / Tue · Bhutan Airlines</span><strong>B3701</strong></div><div><strong class="flight-route"><span class="airport airport-bkk">BKK</span> 07:10 <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-ccu">CCU</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-pbh">PBH</span> 10:30</strong><small>Intermediate stop · Kolkata, India</small></div></li>
-                    <li class="flight-leg"><div><span>Wed / Sat · Bhutan Airlines</span><strong>B3707</strong></div><div><strong class="flight-route"><span class="airport airport-bkk">BKK</span> 07:30 <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-gay">GAY</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-pbh">PBH</span> 11:10</strong><small>Intermediate stop · Gaya, India</small></div></li>
+                    <li class="flight-leg"><div><span>Sun 22 Nov · Japan → gateway</span><strong>Kansai-area departure</strong></div><div><strong class="flight-route"><span class="airport airport-kix">KIX</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-bkk">BKK</span></strong><small>Price the exact KIX option; the current mileage lead from ITM is a separate comparison</small></div></li>
+                    <li class="flight-leg"><div><span>Wed 2 Dec · gateway → Japan</span><strong>Current return lead</strong></div><div><strong class="flight-route"><span class="airport airport-bkk">BKK</span> 01:10 <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-kix">KIX</span> 08:10</strong><small>Working award-search timing; reconfirm availability before transfering points</small></div></li>
+                  </ol>
+                  <p class="flight-schedule-note"><strong>Fare reference:</strong> Thai Airways currently shows a November 2026 KIX–BKK return sample from JPY 86,590. This is a live monthly fare lead, not a quote for our exact dates.</p>
+                </section>
+
+                <section class="flight-option-section" aria-labelledby="bangkok-arrivals-title">
+                  <h4 id="bangkok-arrivals-title">Bangkok → Paro · 23 November working arrival</h4>
+                  <p class="flight-schedule-note"><strong>Selected date pattern:</strong> Monday 23 November. The 22nd and 24th are no longer shown as competing choices because they are not the current itinerary.</p>
+                  <ol class="flight-leg-list">
+                    <li class="flight-leg"><div><span>Mon 23 Nov · Drukair</span><strong>KB141</strong></div><div><strong class="flight-route"><span class="airport airport-bkk">BKK</span> 06:00 <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-gau">GAU</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-pbh">PBH</span> 09:35</strong><small>One intermediate stop · Guwahati, India</small></div></li>
+                    <li class="flight-leg"><div><span>Mon 23 Nov · Bhutan Airlines comparison</span><strong>B3701</strong></div><div><strong class="flight-route"><span class="airport airport-bkk">BKK</span> 07:10 <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-ccu">CCU</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-pbh">PBH</span> 10:30</strong><small>One intermediate stop · Kolkata, India</small></div></li>
                   </ol>
                 </section>
 
                 <section class="flight-option-section" aria-labelledby="bangkok-returns-title">
-                  <h4 id="bangkok-returns-title">Paro → Bangkok · return patterns</h4>
+                  <h4 id="bangkok-returns-title">Paro → Bangkok · 1 December working departure</h4>
                   <ol class="flight-leg-list">
                     <li class="flight-leg"><div><span>Tue 1 Dec · Drukair</span><strong>KB152</strong></div><div><strong><span class="airport airport-pbh">PBH</span> 16:20 → <span class="airport airport-bkk">BKK</span> 20:30</strong><small>Direct</small></div></li>
                     <li class="flight-leg"><div><span>Mon / Tue / Thu / Fri / Sun · Bhutan Airlines</span><strong>B3700</strong></div><div><strong class="flight-route"><span class="airport airport-pbh">PBH</span> 11:10 <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-ccu">CCU</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-bkk">BKK</span> 16:50</strong><small>Intermediate stop · Kolkata, India</small></div></li>
@@ -131,29 +138,39 @@
                   </ol>
                 </section>
 
-                <p class="flight-option-foot"><strong>KIX leg:</strong> Check a direct KIX–Bangkok flight for 21 November, then allow a Bangkok hotel night before the Bhutan sector. The return may also need a Bangkok night before KIX.</p>
-                <p class="flight-source-line"><a class="text-link" href="https://www.drukair.com.sg/flight-schedule/131-1-nov-30-nov-2026/" target="_blank" rel="noopener noreferrer">Drukair November schedule</a> · <a class="text-link" href="https://www.bhutanairlines.bt/assets/bhutan-airlines-images/pdf/Schedule%202026.pdf" target="_blank" rel="noopener noreferrer">Bhutan Airlines 2026 schedule</a></p>
+                <p class="flight-option-foot"><strong>What to price together:</strong> KIX → Bangkok, one Bangkok night, Bangkok → Paro, then the protected return to KIX. Do not treat the gateway sector as an afterthought.</p>
+                <p class="flight-source-line"><a class="text-link" href="https://www.kansai-airport.or.jp/en/flight/schedule" target="_blank" rel="noopener noreferrer">KIX flight schedule</a> · <a class="text-link" href="https://www.thaiairways.com/flights/en/flights-from-osaka-1-to-bangkok" target="_blank" rel="noopener noreferrer">Thai Airways · Osaka to Bangkok</a> · <a class="text-link" href="https://www.drukair.com.sg/flight-schedule/131-1-nov-30-nov-2026/" target="_blank" rel="noopener noreferrer">Drukair November schedule</a> · <a class="text-link" href="https://www.bhutanairlines.bt/assets/bhutan-airlines-images/pdf/Schedule%202026.pdf" target="_blank" rel="noopener noreferrer">Bhutan Airlines 2026 schedule</a></p>
               </article>
 
               <article class="flight-option">
                 <div class="flight-option-head">
-                  <p class="option-label">Option 02 · From Japan KIX</p>
+                  <p class="option-label">Alternative only · requires different dates</p>
                   <h3>KIX → Singapore → Paro</h3>
                   <p>A clean KIX–Singapore flight followed by a less frequent Drukair connection to Bhutan.</p>
                 </div>
 
                 <div class="flight-alert">
-                  <strong>For a 22 November arrival:</strong>
-                  <span>Leave KIX on 21 November, overnight in Singapore, then use the Sunday Paro service if it remains published.</span>
+                  <strong>Not aligned with the current 23 November arrival:</strong>
+                  <span>The published Singapore patterns shown below arrive on 22 or 24 November. Keep this only as a contingency if the Bhutan dates change.</span>
                 </div>
 
+                <section class="flight-option-section" aria-labelledby="singapore-kix-title">
+                  <h4 id="singapore-kix-title">KIX → Singapore · first international leg</h4>
+                  <p class="flight-schedule-note"><strong>Date-shift only:</strong> these connections do not preserve the current 23 November Paro arrival.</p>
+                  <ol class="flight-leg-list">
+                    <li class="flight-leg"><div><span>Japan → gateway</span><strong>Singapore Airlines</strong></div><div><strong class="flight-route"><span class="airport airport-kix">KIX</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-sin">SIN</span></strong><small>Nonstop; about 6h 30m, with multiple daily services; dates would need replanning</small></div></li>
+                    <li class="flight-leg"><div><span>Japan → gateway</span><strong>Scoot</strong></div><div><strong class="flight-route"><span class="airport airport-kix">KIX</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-sin">SIN</span></strong><small>Direct route; compare baggage and add-on costs before choosing</small></div></li>
+                    <li class="flight-leg"><div><span>Gateway → Japan</span><strong>After Bhutan</strong></div><div><strong class="flight-route"><span class="airport airport-sin">SIN</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-kix">KIX</span></strong><small>Allow a Singapore night if the onward KIX flight is not protected</small></div></li>
+                  </ol>
+                  <p class="flight-schedule-note"><strong>Fare references:</strong> Singapore Airlines currently shows a November 2026 return sample from JPY 145,260; Scoot shows a November sample from SGD 849. Neither is a quote for our exact dates.</p>
+                </section>
+
                 <section class="flight-option-section" aria-labelledby="singapore-arrivals-title">
-                  <h4 id="singapore-arrivals-title">Singapore → Paro · 22 November working arrival</h4>
-                  <p class="flight-schedule-note"><strong>Working assumption:</strong> arrive in Paro on Sunday 22 November. Tuesday is a later fallback; 26 November is shown only to make the birthday-day conflict explicit.</p>
+                  <h4 id="singapore-arrivals-title">Singapore → Paro · alternative date patterns</h4>
+                  <p class="flight-schedule-note"><strong>Not the current itinerary:</strong> use these only if the group deliberately changes the 23 November arrival.</p>
                   <ol class="flight-leg-list">
                     <li class="flight-leg"><div><span>Sun 22 Nov · Drukair</span><strong>KB541</strong></div><div><strong class="flight-route"><span class="airport airport-sin">SIN</span> 12:30 <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-gau">GAU</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-pbh">PBH</span> 16:45</strong><small>Intermediate stop · Guwahati, India</small></div></li>
                     <li class="flight-leg flight-leg-fallback"><div><span>Fallback · Tue 24 Nov · Drukair</span><strong>KB541</strong></div><div><strong class="flight-route"><span class="airport airport-sin">SIN</span> 06:00 <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-gau">GAU</span> <span class="flight-route-arrow" aria-hidden="true">→</span> <span class="airport airport-pbh">PBH</span> 10:15</strong><small>Intermediate stop · Guwahati, India</small></div></li>
-                    <li class="flight-leg flight-leg-fallback"><div><span>Not recommended · Thu 26 Nov · Drukair</span><strong>KB541</strong></div><div><strong><span class="airport airport-sin">SIN</span> 12:30 → <span class="airport airport-pbh">PBH</span> 16:45</strong><small>Not suitable if the birthday is to remain free from a long transfer</small></div></li>
                   </ol>
                 </section>
 
@@ -165,8 +182,8 @@
                   </ol>
                 </section>
 
-                <p class="flight-option-foot"><strong>KIX leg:</strong> Singapore Airlines publishes nonstop KIX–SIN service of about 6 hours 30 minutes, with multiple daily departures. Exact 21 November availability and fare still need date-specific checking.</p>
-                <p class="flight-source-line"><a class="text-link" href="https://www.singaporeair.com/nz/en/plan-travel/destinations/flights-from-osaka-to-singapore/" target="_blank" rel="noopener noreferrer">Singapore Airlines · Osaka to Singapore</a> · <a class="text-link" href="https://www.drukair.com.sg/news/drukair-increases-flights-from-singapore-to-paro/" target="_blank" rel="noopener noreferrer">Drukair Singapore–Paro update</a></p>
+                <p class="flight-option-foot"><strong>What to price together:</strong> KIX → Singapore, one Singapore night, Singapore → Paro, then the protected return to KIX. The cheaper-looking ticket is not automatically the simpler one.</p>
+                <p class="flight-source-line"><a class="text-link" href="https://www.kansai-airport.or.jp/en/flight/schedule" target="_blank" rel="noopener noreferrer">KIX flight schedule</a> · <a class="text-link" href="https://www.singaporeair.com/sg/en/plan-travel/destinations/flights-from-osaka-to-singapore/" target="_blank" rel="noopener noreferrer">Singapore Airlines · Osaka to Singapore</a> · <a class="text-link" href="https://www.flyscoot.com/flights/en/flights-from-osaka" target="_blank" rel="noopener noreferrer">Scoot · flights from Osaka</a> · <a class="text-link" href="https://www.drukair.com.sg/news/drukair-increases-flights-from-singapore-to-paro/" target="_blank" rel="noopener noreferrer">Drukair Singapore–Paro update</a></p>
               </article>
             </div>
           </div>
@@ -176,14 +193,14 @@
           <div class="container flight-domestic">
             <div>
               <p class="eyebrow">Inside Bhutan · not from Japan</p>
-              <h2 id="domestic-title">Optional Paro → Bumthang flight.</h2>
+              <h2 id="domestic-title">The domestic flight decides which festival is possible.</h2>
             </div>
             <div class="flight-domestic-row">
-              <div><span>Potential service</span><strong>KB010</strong></div>
-              <div><span>Published pattern</span><strong>PBH 09:55 → Bumthang 10:30</strong></div>
-              <div><span>Status</span><strong>Reconfirm before booking</strong></div>
+              <div><span>Tue 24 Nov · Jambay window</span><strong>KB010 · PBH 09:55 → BUT 10:30</strong></div>
+              <div><span>Wed 25 Nov · Nalakhar only</span><strong>KB010 · PBH 07:30 → BUT 08:05</strong></div>
+              <div><span>Status</span><strong>Potential services · reconfirm before booking</strong></div>
             </div>
-            <p>This is relevant to the Central Bhutan routes, but it is not guaranteed and should have a road fallback. It does not replace the KIX → gateway → Paro flight chain.</p>
+            <p>Flying on 24 November is the only listed flight pattern that might preserve Jambay’s one-day window; even then, the festival programme and transfer from Bumthang airport must line up. Flying on the 25th can still support Nalakhar on 25–26 November. Neither service is booked or guaranteed.</p>
           </div>
         </section>
 
@@ -213,9 +230,12 @@
               <a href="https://www.drukair.com.sg/flight-schedule/131-1-nov-30-nov-2026/" target="_blank" rel="noopener noreferrer"><strong>Drukair · November 2026</strong><span>Published Bhutan flight patterns; subject to daily change.</span></a>
               <a href="https://www.drukair.com.sg/flight-schedule/132-1dec-31dec-2026/" target="_blank" rel="noopener noreferrer"><strong>Drukair · December 2026</strong><span>Published early-December return patterns; subject to daily change.</span></a>
               <a href="https://www.bhutanairlines.bt/assets/bhutan-airlines-images/pdf/Schedule%202026.pdf" target="_blank" rel="noopener noreferrer"><strong>Bhutan Airlines · 2026 schedule</strong><span>Bangkok, Kolkata and Gaya routing patterns; verify before planning.</span></a>
+              <a href="https://www.thaiairways.com/flights/en/flights-from-osaka-1-to-bangkok" target="_blank" rel="noopener noreferrer"><strong>Thai Airways · Osaka to Bangkok</strong><span>Official KIX–BKK route and fare reference page.</span></a>
+              <a href="https://www.singaporeair.com/sg/en/plan-travel/destinations/flights-from-osaka-to-singapore/" target="_blank" rel="noopener noreferrer"><strong>Singapore Airlines · Osaka to Singapore</strong><span>Official nonstop route, duration and frequency information.</span></a>
+              <a href="https://www.flyscoot.com/flights/en/flights-from-osaka" target="_blank" rel="noopener noreferrer"><strong>Scoot · flights from Osaka</strong><span>Official KIX–SIN fare and route reference.</span></a>
             </div>
           </div>
-          <p class="container source-date">Sources last checked: 15 August 2026 · Current planning information; reconfirm before booking.</p>
+          <p class="container source-date">Sources last checked: 18 August 2026 · Current planning information; reconfirm before booking.</p>
         </section>
       </main>
 
