@@ -9,8 +9,16 @@
     />
     <title>Bhutan 2026 | Two Festival-Led Journeys</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260819-10" />
-    <script defer src="app.js?v=20260819-9"></script>
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem("bhutan-2026-theme");
+          if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
+        } catch {}
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css?v=20260820-2" />
+    <script defer src="app.js?v=20260820-2"></script>
   </head>
   <body>
     <div class="access-gate" id="access-gate">
@@ -44,6 +52,9 @@
           <a href="index.html#routes" aria-current="page">Route options</a>
           <a href="flights.html">Flights from KIX</a>
           <a href="agencies.html">Agency reviews</a>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+            <span class="theme-toggle-label">Dark mode</span>
+          </button>
         </nav>
       </div>
     </header>
@@ -67,16 +78,16 @@
         </div>
         <div class="container hero-content">
           <div class="hero-copy">
-            <p class="eyebrow eyebrow-light">A festival-led birthday journey for 3–4 travellers</p>
+            <p class="eyebrow eyebrow-light">A festival-led birthday journey for 3–6 travellers</p>
             <h1 id="hero-title">Two ways to make Bumthang the centre of Bhutan.</h1>
-            <p class="hero-deck">Both versions keep 26 November in Bumthang and treat the festival as the reason to travel farther. The choice is whether we stay close to Central Bhutan or continue west afterwards.</p>
+            <p class="hero-deck">Both versions make Bumthang the festival anchor. Proposal 1 keeps 26 November there; Company #4’s updated proposal moves to Phobjikha on the birthday. The choice is how much festival depth and western Bhutan we want after that.</p>
             <a class="button button-light" href="#routes">Compare the two routes</a>
           </div>
           <dl class="hero-facts" aria-label="Trip facts">
-            <div><dt>Planning update</dt><dd>19 August 2026 · latest operator document checked</dd></div>
+             <div><dt>Planning update</dt><dd>22 August 2026 · Company #4 proposal reviewed</dd></div>
             <div><dt>Bhutan dates</dt><dd>23 November – 1 December 2026</dd></div>
             <div><dt>Working flights</dt><dd>Arrive Paro 23 Nov at 09:35 · depart 1 Dec at 16:20</dd></div>
-            <div><dt>Birthday</dt><dd>26 November 2026 · Bumthang in both versions</dd></div>
+             <div><dt>Birthday</dt><dd>26 November 2026 · Bumthang in Proposal 1 · Phobjikha in Company #4’s proposal</dd></div>
           </dl>
         </div>
       </section>
@@ -90,7 +101,7 @@
           <div class="brief-list">
               <div><strong>Stay with Bumthang</strong><p>Make Central Bhutan the trip: festival, monasteries, craft and slower days around Bumthang. Less geographical variety, more room for the reason we are going.</p></div>
               <div><strong>Add the west</strong><p>After Bumthang, continue to Phobjikha, Punakha and Paro. More landscape and food; more road and more hotel arithmetic.</p></div>
-              <div><strong>The non-negotiable</strong><p>26 November stays in Bumthang. It should not become a scenic transfer with a cake waiting at the other end.</p></div>
+              <div><strong>The non-negotiable</strong><p>26 November should not become a scenic transfer with a cake waiting at the other end. Proposal 1 meets that preference; Company #4’s updated proposal still needs revision.</p></div>
           </div>
         </div>
       </section>
@@ -100,9 +111,9 @@
           <div class="section-heading">
             <div>
               <p class="eyebrow">The Bumthang decision</p>
-              <h2 id="routes-title">Two detailed proposals. One festival centre.</h2>
-            </div>
-            <p class="section-heading-note">These are the two nine-day documents we can compare directly: 23 November–1 December, with 26 November in Bumthang. The question is not which operator wins; it is how much festival time, western Bhutan and hotel movement we actually want.</p>
+                <h2 id="routes-title">Two detailed proposals. Bumthang is the festival centre.</h2>
+              </div>
+            <p class="section-heading-note">Both documents run 23 November–1 December and make Bumthang the festival centre. Proposal 1 keeps the birthday there; Company #4’s updated proposal transfers to Phobjikha on 26 November. Compare what each route buys before asking an operator to revise it.</p>
           </div>
           <div class="place-key" aria-label="Place colour key">
             <span class="place-key-title">Place colour key</span>
@@ -150,8 +161,13 @@
               <p class="section-heading-note">The route decision comes first. Inside either route, these are the two festival windows that shape the Bumthang stay.</p>
           </div>
           <div class="birthday-introduction">
-            <p><strong>Both routes keep 26 November in Bumthang.</strong> The published calendar lists Jambay Lhakhang Singye Cham on 24 November and Nalakhar Tshechu on 24–26 November. These are planning windows only; the exact programme, visitor access and transport remain unconfirmed.</p>
+            <p><strong>Both detailed proposals include a Bumthang festival window, but they do not place the birthday in the same way.</strong> Proposal 1 keeps 26 November in Bumthang. Company #4’s updated proposal schedules a Bumthang → Phobjikha transfer on 26 November, with the birthday celebration after arrival. The published calendar lists Jambay Lhakhang Singye Cham on 24 November and Nalakhar Tshechu on 24–26 November; exact programme, access and transport remain unconfirmed.</p>
             <p class="birthday-reference">Both dates come from Bhutan Travel’s tentative 2026 calendar, updated in April 2025. Reconfirm the exact programme, access and transport before booking.</p>
+            <div class="birthday-reading source-list" aria-label="Festival background and planning links">
+              <a href="https://bhutan.travel/festivals" target="_blank" rel="noopener noreferrer"><strong>Bhutan Travel · festival overview</strong><span>Useful context for how Bhutan’s festivals fit into living religious and community life.</span></a>
+              <a href="https://a.storyblok.com/f/171618/x/421b8ac6a3/tentative_festival_dates_2026.pdf" target="_blank" rel="noopener noreferrer"><strong>2026 tentative festival calendar</strong><span>The planning document behind the two date windows shown here; reconfirm before booking.</span></a>
+              <a href="https://www.visitbhutan.com/festival-detail.php?id=61" target="_blank" rel="noopener noreferrer"><strong>Tshechu · general festival context</strong><span>A short introduction to the term and the religious tradition, rather than just the spectacle.</span></a>
+            </div>
           </div>
           <div class="birthday-list" id="birthday-list"></div>
         </div>
@@ -185,8 +201,8 @@
           <div class="cost-list">
             <div class="cost-row cost-row-latest"><strong>Excursion to Himalayas<br><small>Latest proposal · 9 days / 8 nights</small></strong><span>USD 4,620 / USD 8,400 total</span><small>2 travellers: USD 4,620 · 4 travellers: USD 8,400. SDF, GST and visa are already included; exact structure shown below.</small></div>
             <div class="cost-row"><strong>Earlier reference<br><small>6-night proposal</small></strong><span>USD 1,742.50 / USD 1,585 pp</span><small>Historical context only · not a price for the current 9-day route.</small></div>
-            <div class="cost-row"><strong>Bhutan Mystical Tours &amp; Adventures<br><small>New nine-day proposal</small></strong><span>Total not supplied</span><small>SDF can be shown separately as a common baseline, but the quote does not state its inclusion, the full package total, its unit basis, GST, visa, domestic flight or the full list of inclusions.</small></div>
-            <div class="cost-row"><strong>Bhutan Travel Bureau<br><small>Ten-day outline</small></strong><span>Awaiting quote</span><small>No confirmed quotation supplied; dates are not yet aligned to the 23 November arrival.</small></div>
+            <div class="cost-row"><strong>Bhutan Mystical Tours &amp; Adventures<br><small>Updated proposal · 9 days / 8 nights</small></strong><span>USD 6,336 total for 3</span><small>USD 2,112 for 1 traveller or USD 6,336 for 3: SDF USD 2,400 + tour package USD 3,816 + visa USD 120. Domestic and international flights are excluded; the proposal also says SDF and government taxes are included in the package, so that wording needs reconciliation.</small></div>
+            <div class="cost-row"><strong>Bhutan Travel Bureau<br><small>Ten-day outline</small></strong><span>Awaiting quote</span><small>No confirmed quotation supplied. With our current 23 November arrival, Day 5 would fall on 27 November; the same note also mentions a 22 November–4 December window, so the intended arrival date and festival-day alignment need confirmation.</small></div>
             <div class="cost-row"><strong>Go Bhutan Tours<br><small>Initial reply only</small></strong><span>Awaiting itinerary</span><small>No route or quotation supplied yet.</small></div>
           </div>
           <div class="cost-breakdown">
@@ -260,7 +276,7 @@
                 <div class="cost-nights-total"><strong id="mandatory-total">USD 840</strong><span>SDF + visa</span><small>Mandatory baseline per traveller</small></div>
               </div>
             </div>
-            <p class="cost-research-note">Accommodation, meals, guide, vehicle, entrance fees, GST, domestic flights and personal spending still need to be priced by the operator. Do not add this baseline to Company #1’s stated total: its SDF and visa are already included. For Company #4, keep the SDF line separate until the operator confirms whether it is included.</p>
+            <p class="cost-research-note">Accommodation, meals, guide, vehicle, entrance fees, GST, domestic flights and personal spending still need to be priced by the operator. Do not add this baseline to Company #1’s stated total: its SDF and visa are already included. Company #4 now itemises SDF and visa, but also says SDF and government taxes are included in the package; ask the operator to confirm that the mandatory SDF is not counted twice. No separate GST line appears in that proposal.</p>
           </div>
         </div>
       </section>
@@ -276,8 +292,8 @@
           </div>
           <div class="operator-list">
             <article class="operator-row"><p class="eyebrow">Detailed nine-day proposal</p><div><h3>Excursion to Himalayas · Company #1</h3><p><strong>Operator proposal:</strong> 23 November–1 December, with Thimphu on the 24th, a Paro → Bumthang flight on the 25th, a festival and birthday day on the 26th, then Bumthang → Paro by flight and a 4–5 hour road transfer to Punakha on the 27th. Phobjikha follows on the 28th, Paro on the 29th and Tiger’s Nest on the 30th.</p><p><strong>Our reading:</strong> The structure is workable, but the document calls 26 November “Jambay Lhakhang Drup Festival”. The official tentative 2026 calendar instead lists Jambay Lhakhang Drup on 26–29 October, Jambay Lhakhang Singye Cham on 24 November and Nalakhar Tshechu on 24–26 November. We would keep the birthday in Bumthang, ask the operator to name the exact event, and make the 27th flight-and-road timing explicit before sending it back for revision. The full day-by-day detail remains in the <a class="text-link" href="https://docs.google.com/document/d/1RgobzuirAuhbDoD43gQGt3lNikxlalSpgyCPlA-0f3o/edit?tab=t.0" target="_blank" rel="noopener noreferrer">read-only planning document</a>.</p><a class="text-link" href="https://excursiontohimalaya.com/" target="_blank" rel="noopener noreferrer">Open operator site</a></div></article>
-            <article class="operator-row"><p class="eyebrow">Personal nine-day proposal</p><div><h3>Bhutan Mystical Tours &amp; Adventures · Company #4</h3><p>Arrive 23 November and reach Bumthang on the 24th, then keep 24–26 November around the festivals and birthday before continuing west. The family-style birthday dinner is a hosted meal, not a confirmed homestay. The 24 November domestic flight is the sensible version if Jambay matters; the proposed 9–10 hour road transfer would consume much of the festival day.</p><a class="text-link" href="https://bhutanmystical.com/" target="_blank" rel="noopener noreferrer">Open operator site</a></div></article>
-            <article class="operator-row"><p class="eyebrow">Ten-day outline</p><div><h3>Bhutan Travel Bureau · Company #2</h3><p>Its route includes Gangtey, Bumthang, Punakha, a proposed Punakha homestay and Paro. With a 23 November arrival, however, its Day 5 festival visit would fall on 27 November, after both listed festival windows. It needs a dated revision before it can be compared fairly.</p><a class="text-link" href="https://services.bhutan.travel/search/tour-operator/bhutan-travel-bureau" target="_blank" rel="noopener noreferrer">Open operator listing</a></div></article>
+            <article class="operator-row"><p class="eyebrow">Updated nine-day proposal · reviewed 22 August 2026</p><div><h3>Bhutan Mystical Tours &amp; Adventures · Company #4</h3><p>Arrive 23 November; reach Bumthang on the 24th by a 9–10 hour road transfer or a possible 35-minute domestic flight; attend Jambay Singye Cham on the 24th and Nalakhar Tshechu on the 25th. On 26 November the proposal moves 5–6 hours to Phobjikha before a small birthday celebration. It then continues through Punakha, a family dinner and craft/sustainability stops in Thimphu, and Paro.</p><p><strong>Our reading:</strong> The updated document is more specific about the festival sequence and included services, but the birthday is still a transfer day. It mentions a farmhouse possibility and a home-cooked family dinner; neither is a confirmed overnight homestay. The complete source remains in the <a class="text-link" href="https://docs.google.com/document/d/19Iqw9wdcTpsUKDkVOn9BOvRSzg3cMoTP/edit" target="_blank" rel="noopener noreferrer">read-only Company #4 proposal</a>.</p><a class="text-link" href="https://bhutanmystical.com/" target="_blank" rel="noopener noreferrer">Open operator site</a></div></article>
+            <article class="operator-row"><p class="eyebrow">Ten-day outline</p><div><h3>Bhutan Travel Bureau · Company #2</h3><p>Its route includes Gangtey, Bumthang, Punakha, a proposed Punakha homestay and Paro. With our current 23 November arrival, its Day 5 festival visit would fall on 27 November, after both listed festival windows. The same source note also gives a 22 November–4 December travel window, so the intended arrival date and festival-day alignment need clarification before a fair comparison.</p><a class="text-link" href="https://services.bhutan.travel/search/tour-operator/bhutan-travel-bureau" target="_blank" rel="noopener noreferrer">Open operator listing</a></div></article>
             <article class="operator-row"><p class="eyebrow">Initial reply only</p><div><h3>Go Bhutan Tours · Company #3</h3><p>A sales contact has replied, but no itinerary or quotation is in the latest planning document. Keep it in the comparison, but do not infer a route from its general marketing material.</p><a class="text-link" href="https://www.gobhutantours.com/" target="_blank" rel="noopener noreferrer">Open operator site</a></div></article>
             <article class="operator-row"><p class="eyebrow">Optional wider search</p><div><h3>Other agencies to keep in view</h3><p>There may be no need to add another operator. If the chosen route needs a different fit, these are simply further licensed Bhutanese leads to check against the same brief: can they customise the route, keep 26 November free from a long transfer, and name the people and places involved?</p></div></article>
           </div>

@@ -9,8 +9,16 @@
     />
     <title>Bhutan 2026 | Agency Reviews</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260819-10" />
-    <script defer src="app.js?v=20260819-9"></script>
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem("bhutan-2026-theme");
+          if (saved === "dark" || saved === "light") document.documentElement.dataset.theme = saved;
+        } catch {}
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css?v=20260820-2" />
+    <script defer src="app.js?v=20260820-2"></script>
   </head>
   <body class="agency-page">
     <div class="access-gate" id="access-gate">
@@ -43,7 +51,10 @@
           <nav class="primary-nav" aria-label="Journey pages">
             <a href="index.html#routes">Route options</a>
             <a href="flights.html">Flights from KIX</a>
-            <a href="agencies.html" aria-current="page">Agency reviews</a>
+          <a href="agencies.html" aria-current="page">Agency reviews</a>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+            <span class="theme-toggle-label">Dark mode</span>
+          </button>
           </nav>
         </div>
       </header>
@@ -94,7 +105,7 @@
               </li>
               <li class="agency-secondary">
                 <div><span class="agency-reading-number">02</span><strong>Bhutan Travel Bureau</strong></div>
-                <p><strong>Established public track record; current reply still needs work.</strong> Its ten-day outline is customisable, but Day 5 falls after both festival windows when arrival is 23 November.</p>
+                <p><strong>Established public track record; current reply still needs work.</strong> Its ten-day outline is customisable, but with our current 23 November arrival Day 5 falls after both festival windows. The same source note also mentions a 22 November–4 December window, so the intended arrival date and festival-day alignment need confirmation.</p>
                 <a class="text-link" href="#company-2">Compare evidence</a>
               </li>
               <li class="agency-secondary">
@@ -104,7 +115,7 @@
               </li>
               <li class="agency-priority">
                 <div><span class="agency-reading-number">04</span><strong>Bhutan Mystical Tours &amp; Adventures</strong></div>
-                <p><strong>Focus first · most distinctive invitation.</strong> Its dated nine-day proposal protects the festival and birthday, with a family dinner. That is a hosted meal rather than a confirmed homestay, and the price basis needs clarification.</p>
+                        <p><strong>Most distinctive proposal to inspect closely.</strong> Its updated nine-day proposal names both Bumthang festival windows and offers a farmhouse possibility plus a family dinner. The birthday itself follows a 5–6 hour transfer to Phobjikha, so the proposal still needs a meaningful revision before it fits our brief.</p>
                 <a class="text-link" href="#company-4">Compare evidence</a>
               </li>
             </ol>
@@ -205,25 +216,25 @@
 
               <article class="agency-row agency-priority" id="company-4">
                 <div class="agency-row-label">
-                  <p class="option-label">Focus first · Company #4</p>
+                  <p class="option-label">Updated proposal · Company #4</p>
                   <h3>Bhutan Mystical Tours &amp; Adventures</h3>
-                  <p class="agency-signal">Interesting proposal, but public independent review evidence is currently thin</p>
-                  <p class="agency-meta">Tripadvisor page checked 18 August 2026: no reviews shown<br />Department of Tourism listing: licensed 1999</p>
+                  <p class="agency-signal">More specific proposal; public independent review evidence is still unavailable</p>
+                  <p class="agency-meta">Source proposal modified 18 August 2026 · reviewed 22 August 2026<br />Tripadvisor page checked 18 August 2026: no reviews shown<br />Department of Tourism listing: licensed 1999</p>
                 </div>
                 <div class="agency-row-body">
-                  <p><strong>Overall review tone:</strong> not currently measurable from independent reviews. The supplied nine-day proposal is personal, date-specific and takes Bumthang seriously; the family-style birthday dinner is a hosted meal, not evidence of a confirmed overnight homestay.</p>
-                  <div class="agency-evidence"><strong>Current proposal:</strong> 23 November–1 December; Bumthang on 24–26 November, followed by Phobjikha, Punakha, Thimphu and Paro. Clarify the USD 159 / USD 137 basis, final total and whether the domestic flight is extra.</div>
+                  <p><strong>Overall review tone:</strong> not currently measurable from independent reviews. The updated proposal is personal and date-specific: it explicitly names Jambay Singye Cham, Nalakhar Tshechu, a possible farmhouse visit, a home-cooked family dinner and several cultural stops. Those are proposal details, not proof that each host, activity or accommodation is confirmed.</p>
+                  <div class="agency-evidence"><strong>Updated proposal:</strong> 23 November–1 December / 8 hotel nights. 24 November reaches Bumthang by a 9–10 hour road journey or an approximately 35-minute domestic flight, followed by Jambay Singye Cham. 25 November is Nalakhar Tshechu. 26 November is a 5–6 hour Bumthang → Phobjikha transfer followed by a small birthday celebration; 27 November continues to Punakha; 28 November returns to Thimphu for sightseeing, crafts and an invited family dinner; 29–30 November covers Paro and Tiger’s Nest. The quoted totals are USD 2,112 for one traveller and USD 6,336 for three.</div>
                   <details class="agency-details">
-                    <summary>Read the evidence gap and the questions it leaves</summary>
+                    <summary>Read the updated evidence and the questions it leaves</summary>
                     <div class="agency-detail-grid">
                       <div>
                         <h4>Worth reading</h4>
-                        <p><a class="text-link" href="https://www.tripadvisor.com/Attraction_Review-g293845-d21161452-Reviews-Bhutan_Mystical_Tours_Adventures-Thimphu_Thimphu_District.html" target="_blank" rel="noopener noreferrer">The direct Tripadvisor page currently shows no traveller reviews</a>. That absence is the important finding. Read the proposal itself carefully, especially the festival programme, family dinner, overnight arrangement and quote arithmetic.</p>
+                        <p><a class="text-link" href="https://docs.google.com/document/d/19Iqw9wdcTpsUKDkVOn9BOvRSzg3cMoTP/edit" target="_blank" rel="noopener noreferrer">Read the updated source proposal</a> first: the useful details are the exact festival sequence, the 26 November transfer, the farmhouse/family-dinner wording and the included/excluded cost list. <a class="text-link" href="https://www.tripadvisor.com/Attraction_Review-g293845-d21161452-Reviews-Bhutan_Mystical_Tours_Adventures-Thimphu_Thimphu_District.html" target="_blank" rel="noopener noreferrer">The direct Tripadvisor page currently shows no traveller reviews</a>, so there is no independent sentiment pattern to weigh yet.</p>
                       </div>
                       <div>
                         <h4>For our brief</h4>
-                        <p>Ask whether the family dinner is a hosted meal or an actual homestay, who the host is, what is included in the quoted amount, and how the two Bumthang festival windows affect the dates.</p>
-                        <p class="agency-links"><a class="text-link" href="https://services.bhutan.travel/search/tour-operator/bhutan-mystical-tours-adventures" target="_blank" rel="noopener noreferrer">Official listing</a><a class="text-link" href="https://www.tripadvisor.com/Attraction_Review-g293845-d21161452-Reviews-Bhutan_Mystical_Tours_Adventures-Thimphu_Thimphu_District.html" target="_blank" rel="noopener noreferrer">Review page</a><a class="text-link" href="https://bhutanmystical.com/" target="_blank" rel="noopener noreferrer">Operator site</a></p>
+                        <p>Ask whether 26 November can remain in Bumthang or the transfer can move; name the actual hotels and provide their review links; confirm the domestic-flight fare and weather fallback; identify the farmhouse and family hosts; and reconcile the separately listed SDF with the package wording that says SDF and government taxes are included. No separate GST line is shown.</p>
+                        <p class="agency-links"><a class="text-link" href="https://services.bhutan.travel/search/tour-operator/bhutan-mystical-tours-adventures" target="_blank" rel="noopener noreferrer">Official listing</a><a class="text-link" href="https://www.tripadvisor.com/Attraction_Review-g293845-d21161452-Reviews-Bhutan_Mystical_Tours_Adventures-Thimphu_Thimphu_District.html" target="_blank" rel="noopener noreferrer">Review page</a><a class="text-link" href="https://bhutanmystical.com/" target="_blank" rel="noopener noreferrer">Operator site</a><a class="text-link" href="https://docs.google.com/document/d/19Iqw9wdcTpsUKDkVOn9BOvRSzg3cMoTP/edit" target="_blank" rel="noopener noreferrer">Source proposal</a></p>
                       </div>
                     </div>
                   </details>

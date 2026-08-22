@@ -4,6 +4,7 @@
   const ACCESS_PASSWORD = "261126";
   const ACCESS_SESSION_KEY = "bhutan-2026-access";
   const ACCESS_COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
+  const THEME_STORAGE_KEY = "bhutan-2026-theme";
 
   const IMAGE_DATA = {
     jambay: {
@@ -28,9 +29,20 @@
 
   const LOCATION_TOKENS = [
     ["Tiger’s Nest", "place-paro"],
+    ["Jambay Lhakhang Singye Cham", "place-bumthang"],
     ["Jambay Lhakhang", "place-bumthang"],
     ["Nalakhar Tshechu", "place-bumthang"],
-    ["Kurjey", "place-bumthang"],
+    ["Kurjey Lhakhang", "place-bumthang"],
+    ["Jakar Dzong", "place-bumthang"],
+    ["Tamshing Lhakhang", "place-bumthang"],
+    ["Druptob Nunnery", "place-thimphu"],
+    ["Gangtey Monastery", "place-phobjikha"],
+    ["Crane Information Centre", "place-phobjikha"],
+    ["Chimi Lhakhang", "place-punakha"],
+    ["Rinpung Dzong", "place-paro"],
+    ["Ta Dzong", "place-paro"],
+    ["Folk Heritage Museum", "place-thimphu"],
+    ["Kyichu Lhakhang", "place-paro"],
     ["Dochula", "place-punakha"],
     ["Phobjikha", "place-phobjikha"],
     ["Punakha", "place-punakha"],
@@ -68,6 +80,11 @@
       reviews: "https://www.google.com/search?q=%22Spirit+of+Home+Resorts%22+Paro+Bhutan+reviews",
       note: "This exact hotel name appears in the proposal, but no reliable hotel listing was found under that name; ask the operator to identify the property."
     },
+    toConfirm: {
+      name: "Accommodation not named",
+      location: "Company #4 proposal",
+      note: "The updated proposal does not name the properties. Ask for the actual hotel names and review links before comparing accommodation."
+    },
     meriPuensum: {
       name: "Meri Puensum Resort",
       location: "Punakha",
@@ -75,34 +92,6 @@
       reviews: "https://www.tripadvisor.com/Hotel_Review-g469429-d456018-Reviews-Meri_Puensum_Resort-Punakha_Punakha_District.html",
       note: "Official resort site and independent review page."
     },
-    namgay: {
-      name: "Namgay Heritage Hotel",
-      location: "Thimphu",
-      official: "https://www.namgayheritage.com/",
-      reviews: "https://www.tripadvisor.com/Hotel_Review-g293845-d1740151-Reviews-Namgay_Heritage_Hotel-Thimphu_Thimphu_District.html",
-      note: "Official hotel site and independent review page."
-    },
-    ugyenLing: {
-      name: "Ugyen Ling Resort",
-      location: "Bumthang",
-      official: "https://services.bhutan.travel/search/hotel",
-      reviews: "https://www.tripadvisor.com/Hotel_Review-g469426-d4103895-Reviews-Hotel_Ugyen_Ling-Bumthang_Bumthang_District.html",
-      note: "The proposal says Ugyen Ling or similar; the official directory is the safest current property reference."
-    },
-    dewachen: {
-      name: "Dewachen Hotel",
-      location: "Phobjikha",
-      official: "https://services.bhutan.travel/search/hotel",
-      reviews: "https://www.tripadvisor.com/Hotel_Review-g2425780-d605124-Reviews-Dewachen_Hotel_Spa-Phobjikha_Valley_Wangdue_Phodrang_District.html",
-      note: "The proposal says Dewachen or similar; confirm the actual property and whether the spa is operating."
-    },
-    tenzinling: {
-      name: "Tenzinling Resort",
-      location: "Paro",
-      official: "https://services.bhutan.travel/search/hotel/tenzinling-resort",
-      reviews: "https://www.tripadvisor.com/Hotel_Review-g321541-d1463364-Reviews-Tenzinling_Resort-Paro_Paro_District.html",
-      note: "Official tourism listing and independent review page."
-    }
   };
 
   const ROUTES = [
@@ -134,6 +123,7 @@
         basis: "23 Nov–1 Dec · 8 hotel nights",
         quote: "2 travellers: USD 4,620 total · USD 2,310 per person; 4 travellers: USD 8,400 total · USD 2,100 per person",
         total: "USD 4,620 for 2 travellers · USD 8,400 for 4 travellers",
+        package: "USD 2,800 for 2 / USD 4,800 for 4 (operator tour component)",
         sdf: "Included · USD 1,600 for 2 / USD 3,200 for 4 (USD 100 × 8 nights)",
         visa: "Included · USD 80 for 2 / USD 160 for 4 (USD 40 per adult)",
         note: "SDF, GST and visa are included. Bangkok–Paro and Paro–Bumthang flight references are listed separately in the proposal; revised-route inclusions still need reconfirmation."
@@ -175,74 +165,96 @@
       id: "B",
       proposal: "Proposal 2",
       operator: "Bhutan Mystical Tours & Adventures · Company #4",
-      source: "Personal proposal · 9 days / 8 hotel nights",
-      name: "Hold Bumthang for the festival window",
-      subtitle: "Three Bumthang nights, then a shorter western continuation",
+      source: "Updated proposal · 9 days / 8 hotel nights",
+      name: "Bumthang festivals, then west",
+      subtitle: "Two festival days, then a birthday transfer into Phobjikha",
       image: "phobjikha",
-      birthdayLocation: "Bumthang",
-      visibleSummary: "Arrive in Bumthang by 24 November, keep the festival and birthday there, then continue west.",
-      core: "This proposal reaches Bumthang one day earlier and keeps three nights there, covering both the festival window and the birthday before moving west. It is more festival-centred than Proposal 1, but it introduces an additional hotel move and depends heavily on a 24 November domestic flight if the group wants to avoid a 9–10 hour road transfer.",
+      birthdayLocation: "Phobjikha",
+      visibleSummary: "Reach Bumthang for the two proposed festival days, then travel to Phobjikha on 26 November for the proposed birthday celebration.",
+      core: "The updated proposal names Jambay Lhakhang Singye Cham on 24 November and Nalakhar Tshechu on 25 November, then moves from Bumthang to Phobjikha on 26 November for a small birthday celebration. It offers the broadest cultural arc, but the birthday transfer conflicts with our preference for a day without a major journey.",
       duration: "9 days · 23 Nov–1 Dec",
       route: "Paro → Thimphu → Bumthang → Phobjikha → Punakha → Thimphu → Paro",
       days: [
-        { date: "23 Nov", plan: "Arrive Paro → Thimphu", overnight: "Thimphu", hotel: "namgay", travel: "Approx. 50 km · 1.5–2h by road" },
-        { date: "24 Nov", plan: "Thimphu → Bumthang via Punakha; arrive for festival window", overnight: "Bumthang", hotel: "ugyenLing", travel: "Approx. 9–10h by road, or domestic flight about 35 min if available" },
-        { date: "25 Nov", plan: "Nalakhar Tshechu; Kurjey and Jambay Lhakhang", overnight: "Bumthang", hotel: "ugyenLing", travel: "Festival and local transfers" },
-        { date: "26 Nov", plan: "Festival finale, farmhouse visit and birthday dinner with the host family", overnight: "Bumthang", hotel: "ugyenLing", travel: "No major transfer planned" },
-        { date: "27 Nov", plan: "Bumthang → Phobjikha Valley", overnight: "Phobjikha", hotel: "dewachen", travel: "Substantial mountain-road transfer; duration to be confirmed" },
-        { date: "28 Nov", plan: "Phobjikha → Punakha; Dzong, village and farmhouse", overnight: "Punakha", hotel: "meriPuensum", travel: "Mountain road; duration to be confirmed" },
-        { date: "29 Nov", plan: "Punakha → Thimphu; GNH, sustainability and craft-centre visit", overnight: "Thimphu", hotel: "namgay", travel: "Mountain road; duration to be confirmed" },
-        { date: "30 Nov", plan: "Thimphu → Paro; relaxed final evening", overnight: "Paro", hotel: "tenzinling", travel: "Approx. 50 km · 1.5–2h by road" },
+        { date: "23 Nov", plan: "Arrive Paro → Thimphu", overnight: "Thimphu", hotel: "toConfirm", travel: "Approx. 50 km · 1 hr 15 mins by road" },
+        { date: "24 Nov", plan: "Thimphu → Bumthang; Jambay Lhakhang Singye Cham and sightseeing", overnight: "Bumthang", hotel: "toConfirm", travel: "Approx. 9–10h by road, or domestic flight about 35 min if available" },
+        { date: "25 Nov", plan: "Nalakhar Tshechu; Jakar Dzong, Kurjey Lhakhang and Tamshing Lhakhang if time", overnight: "Bumthang", hotel: "toConfirm", travel: "Festival and local transfers" },
+        { date: "26 Nov", plan: "Bumthang → Phobjikha Valley; small birthday celebration after arrival", overnight: "Phobjikha", hotel: "toConfirm", travel: "Approx. 155 km · 5–6h by road" },
+        { date: "27 Nov", plan: "Phobjikha → Punakha; Crane Information Centre, Gangtey Monastery and community visit", overnight: "Punakha", hotel: "toConfirm", travel: "Approx. 78 km · 2.5–3h by road" },
+        { date: "28 Nov", plan: "Punakha → Thimphu; GNH/philosophy, sustainability, traditional crafts and invited family dinner", overnight: "Thimphu", hotel: "toConfirm", travel: "Approx. 76 km · 2.5h by road" },
+        { date: "29 Nov", plan: "Thimphu → Paro; Takin Preserve, Folk Heritage Museum, Rinpung Dzong, Ta Dzong and handicrafts", overnight: "Paro", hotel: "toConfirm", travel: "Approx. 50 km · 1–1.5h by road" },
+        { date: "30 Nov", plan: "Tiger’s Nest hike; optional Kyichu Lhakhang or hot-stone bath", overnight: "Paro", hotel: "toConfirm", travel: "Local transfer · hike" },
         { date: "1 Dec", plan: "Departure from Paro", overnight: "No hotel", hotel: null, travel: "Airport transfer" }
       ],
       price: {
         basis: "23 Nov–1 Dec · 8 hotel nights stated in the itinerary",
-        quote: "3 travellers: USD 159 per person; fourth traveller: USD 137 per person",
-        total: "No complete total supplied",
-        sdf: "Baseline only · USD 2,400 for 3 / USD 3,200 for 4 (USD 100 × 8 nights); inclusion is not stated",
-        visa: "Baseline only · USD 120 for 3 / USD 160 for 4 (USD 40 per adult); inclusion is not stated",
-        note: "Confirm the unit basis (nightly rate or package figure), full total for the final group size, GST, SDF and visa inclusion, domestic-flight price/inclusion, and what accommodation, meals, guide, vehicle and entrance fees cover."
+        quote: "1 traveller: USD 2,112 total · 3 travellers: USD 6,336 total",
+        total: "USD 2,112 for 1 traveller · USD 6,336 for 3 travellers",
+        package: "USD 1,272 for 1 · USD 3,816 for 3 (USD 159 × travellers × 8 nights)",
+        sdf: "Stated separately · USD 800 for 1 / USD 2,400 for 3 (USD 100 × 8 nights); package also says SDF and government taxes included",
+        visa: "USD 40 for 1 / USD 120 for 3 (USD 40 per adult); shown as a separate government fee",
+        note: "The package states accommodation, all meals, transport, sightseeing/festival, entries, SDF and government taxes, guide and water. It excludes international/domestic flights, insurance, laundry, beverages, camera fees, luggage/bellboy and tips. No GST line is shown; exact hotels are not named; confirm that the separately listed SDF is not being counted twice."
       },
       dayShape: [
         { label: "Paro arrival", duration: "1 day", dates: "23 Nov · 09:35", span: 1, tone: "arrival", row: 1 },
-        { label: "Bumthang festival window + birthday", duration: "3 days", dates: "24–26 Nov", span: 3, tone: "anchor", row: 1 },
-        { label: "Phobjikha", duration: "1 day", dates: "27 Nov", span: 1, tone: "west", row: 1 },
-        { label: "Punakha", duration: "1 day", dates: "28 Nov", span: 1, tone: "west", row: 1 },
-        { label: "Thimphu + Paro", duration: "2 days", dates: "29–30 Nov", span: 2, tone: "arrival", row: 2 },
+        { label: "Bumthang festival window", duration: "2 days", dates: "24–25 Nov", span: 2, tone: "anchor", row: 1 },
+        { label: "Birthday transfer → Phobjikha", duration: "1 day", dates: "26 Nov", span: 1, tone: "west", row: 1 },
+        { label: "Punakha", duration: "1 day", dates: "27 Nov", span: 1, tone: "west", row: 1 },
+        { label: "Thimphu + Paro", duration: "2 days", dates: "28–29 Nov", span: 2, tone: "arrival", row: 2 },
+        { label: "Tiger’s Nest", duration: "1 day", dates: "30 Nov", span: 1, tone: "arrival", row: 2 },
         { label: "Departure", duration: "1 day", dates: "1 Dec · 16:20", span: 1, tone: "departure", row: 2 }
       ],
-      anchorTiming: "Arrive 24 Nov; festival window and birthday remain in Bumthang through 26 Nov",
-      anchorNights: "3 nights",
-      stay: "Five bases across eight nights: two Thimphu, three Bumthang, one Phobjikha, one Punakha and one Paro. The extra Bumthang night buys festival breathing room; the price is one more change of base.",
-      birthday: "The proposal keeps 26 November in Bumthang for the festival finale, a farmhouse visit and a birthday dinner with the host family. This is a hosted family meal, not a confirmed homestay; the relationship, privacy and contribution should be clarified.",
+      anchorTiming: "Reach Bumthang on 24 Nov for Jambay; Nalakhar follows on 25 Nov; transfer to Phobjikha on 26 Nov",
+      anchorNights: "2 nights",
+      stay: "Five geographic bases across eight nights: Thimphu (split across two nights), Bumthang (two), Phobjikha (one), Punakha (one) and Paro (two). The proposal does not name the properties, so the accommodation rhythm is clearer than the hotel choice.",
+      birthday: "The proposal schedules a 5–6 hour Bumthang → Phobjikha transfer on 26 November, followed by a small birthday celebration and simple Bhutanese dinner after arrival. That conflicts with the current preference for a birthday free from a major transfer; ask whether the birthday can remain in Bumthang or the transfer can move.",
       advantages: [
-        "Three Bumthang nights cover the festival window more comfortably",
-        "Birthday remains in Bumthang without a major transfer",
-        "Includes a proposed family dinner and western cultural stops"
+        "Names both Bumthang festival windows in sequence",
+        "Offers a farmhouse possibility and a simple birthday dinner",
+        "Includes conservation, crafts, family dinner and western cultural stops"
       ],
       tradeoffs: [
-        "24 November is either a 9–10 hour road day or a flight-dependent day",
-        "Five hotel bases fragment the final week more than Proposal 1",
-        "The quoted price basis and domestic-flight treatment are unclear"
+        "26 November is a 5–6 hour transfer before the birthday celebration",
+        "The 24 November road fallback is a 9–10 hour day; flight availability is not guaranteed",
+        "Exact hotels are not named and the SDF wording needs reconciliation"
       ],
-      road: "Planning estimate · highest on 24 November if the domestic flight is unavailable",
-      flight: "A 24 November Paro → Bumthang flight is the key enabler; published schedules and fares require confirmation",
-      suited: "Travellers who want the festival window and hosted birthday to lead the journey.",
-      giveUp: "A simpler hotel rhythm and certainty about the transfer into Bumthang.",
+      road: "High · 9–10h Thimphu → Bumthang if flight unavailable, then 5–6h Bumthang → Phobjikha on 26 Nov",
+      flight: "Potential 24 November Paro → Bumthang flight · about 35 min, subject to availability and weather; domestic fare is excluded",
+      suited: "Travellers who want both named festival windows and a broader westward continuation, and can renegotiate the birthday transfer.",
+      giveUp: "A birthday day without a major transfer, named hotels and a fully resolved quote basis.",
       places: [
         ["National Institute for Zorig Chusum", "Thimphu", "A useful place to see how traditional skills are taught and carried into modern livelihoods.", "https://bhutan.travel/adventure_art"],
-        ["Jambay Lhakhang", "Bumthang", "A sacred site at the centre of the festival question. Its listed 24 November 2026 date remains tentative and needs reconfirmation.", "https://a.storyblok.com/f/171618/x/421b8ac6a3/tentative_festival_dates_2026.pdf"],
-        ["Black-necked Crane Education Centre", "Phobjikha", "An introduction to cranes, habitat, local culture and the practical work of conservation. Sightings remain wild and unguaranteed.", "https://rspnbhutan.org/programs-projects/species-and-habitats/black-necked-crane/"],
-        ["Community-based sustainable tourism", "Phobjikha", "RSPN documents links between conservation, tourism and local livelihoods. A meeting is not automatic; ask for a named host.", "https://rspnbhutan.org/cbst-website-of-phobjikha-launched/"],
-        ["Punakha Valley", "Punakha", "A valley where farms, food, sacred places and everyday movement can sit in the same day.", "https://bhutan.travel/"],
-        ["Tiger’s Nest", "Paro", "Taktsang adds a physically demanding but culturally important final day; weather, trail conditions and guide timing need confirmation.", "https://bhutan.travel/"]
+        ["Jambay Lhakhang Singye Cham", "Bumthang", "The updated proposal places this one-day masked-dance celebration on 24 November. Confirm the 2026 programme and visitor access before treating it as fixed.", "https://a.storyblok.com/f/171618/x/421b8ac6a3/tentative_festival_dates_2026.pdf"],
+        ["Nalakhar Tshechu", "Bumthang", "The proposal places this three-day festival window on 25 November, alongside local cultural life and monastery visits. The programme remains subject to reconfirmation.", "https://visitbhutan.com/festival-detail.php?id=51"],
+        ["Phobjikha Valley", "Phobjikha", "The route pairs the birthday transfer with a farmhouse possibility, Crane Information Centre visit and a community conversation about conservation, agriculture and tourism.", "https://rspnbhutan.org/cbst-website-of-phobjikha-launched/"],
+        ["Druptob Nunnery", "Thimphu", "A proposed stop connected to Bhutanese philosophy and wellbeing, explicitly subject to availability in the source itinerary.", "https://bhutan.travel/"],
+        ["Tiger’s Nest", "Paro", "Taktsang provides the physically demanding final day; weather, trail conditions and guide timing still need confirmation.", "https://bhutan.travel/"]
       ]
     }
   ];
 
   const BIRTHDAYS = [
-    { title: "Jambay Lhakhang Singye Cham", subtitle: "24 November · one-day festival window", image: "jambay", text: "A specific sacred event at Jambay Lhakhang. Reaching it would require the 24 November Paro–Bumthang flight and programme timing that still needs confirmation. The birthday itself would then be a separate, quieter Bumthang day.", route: "Festival choice 1" },
-    { title: "Nalakhar Tshechu", subtitle: "24–26 November · overlaps the birthday", image: "nalakhar", text: "The listed three-day window at Ngaa Lhakhang overlaps 26 November, which makes it the more forgiving festival choice. The exact programme and visitor access still need confirmation before attendance is treated as part of the itinerary.", route: "Festival choice 2" }
+    {
+      title: "Jambay Lhakhang Singye Cham",
+      subtitle: "24 November · one-day festival window",
+      image: "jambay",
+      text: "A specific sacred event at Jambay Lhakhang. Reaching it would require the 24 November Paro–Bumthang flight and programme timing that still needs confirmation. The birthday itself would then be a separate, quieter Bumthang day.",
+      route: "Festival choice 1",
+      links: [
+        ["Festival detail · Singye Cham", "https://visitbhutan.com/festival-detail.php?id=49"],
+        ["Jambay Lhakhang Drup · separate festival context", "https://visitbhutan.com/festival-detail.php?id=6"]
+      ]
+    },
+    {
+      title: "Nalakhar Tshechu",
+      subtitle: "24–26 November · overlaps the birthday",
+      image: "nalakhar",
+      text: "The listed three-day window at Ngaa Lhakhang overlaps 26 November, which makes it the more forgiving festival choice. The exact programme and visitor access still need confirmation before attendance is treated as part of the itinerary.",
+      route: "Festival choice 2",
+      links: [
+        ["Festival detail · Nalakhar Tshechu", "https://visitbhutan.com/festival-detail.php?id=51"],
+        ["Central Bhutan festivals · browse related traditions", "https://www.visitbhutan.com/festival.php?festival_category=Festivals+in+Central+Bhutan"]
+      ]
+    }
   ];
 
   function escapeHTML(value) {
@@ -265,6 +277,11 @@
   function hotelLinksMarkup(key) {
     if (!key) return `<span class="hotel-none">No hotel · departure day</span>`;
     const hotel = HOTEL_DATA[key];
+    if (!hotel.official || !hotel.reviews) {
+      return `<div class="hotel-name"><strong>${escapeHTML(hotel.name)}</strong><small>${locationMarkup(hotel.location)}</small></div>
+        <div class="hotel-links hotel-links-empty">No property link yet</div>
+        <small class="hotel-note">${escapeHTML(hotel.note)}</small>`;
+    }
     return `<div class="hotel-name"><strong>${escapeHTML(hotel.name)}</strong><small>${locationMarkup(hotel.location)}</small></div>
       <div class="hotel-links"><a href="${escapeHTML(hotel.official)}" target="_blank" rel="noopener noreferrer">Hotel / directory</a><a href="${escapeHTML(hotel.reviews)}" target="_blank" rel="noopener noreferrer">Read reviews</a></div>
       <small class="hotel-note">${escapeHTML(hotel.note)}</small>`;
@@ -338,12 +355,13 @@
     const target = document.getElementById("route-price-table");
     if (!target) return;
     target.innerHTML = `<table class="comparison-table proposal-price-table">
-      <caption>Prices copied from the two detailed proposals · USD · not normalised or extrapolated</caption>
+      <caption>Prices copied from the two detailed proposals · USD · not normalised or extrapolated. Where a proposal supplied no package total, arithmetic is shown separately and labelled.</caption>
       <thead><tr><th scope="col">Price question</th>${ROUTES.map((route) => `<th scope="col"><span class="option-label">${escapeHTML(route.proposal)}</span><strong>${escapeHTML(route.operator)}</strong></th>`).join("")}</tr></thead>
       <tbody>
-        <tr class="price-total-row"><th scope="row">Operator-stated total</th>${ROUTES.map((route) => `<td data-label="${escapeHTML(route.proposal)}"><strong>${escapeHTML(route.price.total)}</strong></td>`).join("")}</tr>
+        <tr class="price-total-row"><th scope="row">Total / price status</th>${ROUTES.map((route) => `<td data-label="${escapeHTML(route.proposal)}"><strong>${escapeHTML(route.price.total)}</strong></td>`).join("")}</tr>
         <tr><th scope="row">Stated basis</th>${ROUTES.map((route) => `<td data-label="${escapeHTML(route.proposal)}">${escapeHTML(route.price.basis)}</td>`).join("")}</tr>
         <tr><th scope="row">Quoted price wording</th>${ROUTES.map((route) => `<td data-label="${escapeHTML(route.proposal)}"><strong>${escapeHTML(route.price.quote)}</strong></td>`).join("")}</tr>
+        <tr><th scope="row">Tour package</th>${ROUTES.map((route) => `<td data-label="${escapeHTML(route.proposal)}">${escapeHTML(route.price.package)}</td>`).join("")}</tr>
         <tr><th scope="row">SDF</th>${ROUTES.map((route) => `<td data-label="${escapeHTML(route.proposal)}">${escapeHTML(route.price.sdf)}</td>`).join("")}</tr>
         <tr><th scope="row">Visa fee</th>${ROUTES.map((route) => `<td data-label="${escapeHTML(route.proposal)}">${escapeHTML(route.price.visa)}</td>`).join("")}</tr>
         <tr class="price-clarity-row"><th scope="row">Still missing / needs confirmation</th>${ROUTES.map((route) => `<td data-label="${escapeHTML(route.proposal)}">${escapeHTML(route.price.note)}</td>`).join("")}</tr>
@@ -362,7 +380,7 @@
       }).join("")}
     </tr>`).join("");
     target.innerHTML = `<table class="comparison-table hotel-comparison-table">
-      <caption>Eight hotel nights across the same 23 November–1 December window. “Or similar” remains part of both proposals.</caption>
+      <caption>Eight hotel nights across the same 23 November–1 December window. Several entries are “or similar”; exact properties and availability still need confirmation.</caption>
       <thead><tr><th scope="col">Day</th>${ROUTES.map((route) => `<th scope="col"><span class="option-label">${escapeHTML(route.proposal)}</span><strong>${escapeHTML(route.operator)}</strong></th>`).join("")}</tr></thead>
       <tbody>${rows}</tbody>
     </table>`;
@@ -373,7 +391,7 @@
   }
 
   function renderBirthdays() {
-    document.getElementById("birthday-list").innerHTML = BIRTHDAYS.map((birthday) => `<article class="birthday-row">${imageFigure(birthday.image, "birthday-image")}<div><p class="eyebrow">${locationMarkup(birthday.route)}</p><h3>${locationMarkup(birthday.title)} <span>${locationMarkup(birthday.subtitle)}</span></h3><p>${locationMarkup(birthday.text)}</p></div></article>`).join("");
+    document.getElementById("birthday-list").innerHTML = BIRTHDAYS.map((birthday) => `<article class="birthday-row">${imageFigure(birthday.image, "birthday-image")}<div><p class="eyebrow">${locationMarkup(birthday.route)}</p><h3>${locationMarkup(birthday.title)} <span>${locationMarkup(birthday.subtitle)}</span></h3><p>${locationMarkup(birthday.text)}</p><div class="birthday-links"><strong>Read the background</strong>${birthday.links.map(([label, url]) => `<a class="text-link" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(label)}</a>`).join("")}</div></div></article>`).join("");
   }
 
   let choice = { id: "", note: "" };
@@ -537,6 +555,32 @@
     input.focus();
   }
 
+  function setupTheme() {
+    const root = document.documentElement;
+    const button = document.getElementById("theme-toggle");
+    if (!button) return;
+
+    const label = button.querySelector(".theme-toggle-label");
+    let theme = root.dataset.theme === "dark" ? "dark" : "light";
+
+    const applyTheme = (nextTheme) => {
+      theme = nextTheme === "dark" ? "dark" : "light";
+      root.dataset.theme = theme;
+      const nextLabel = theme === "dark" ? "Light mode" : "Dark mode";
+      button.setAttribute("aria-pressed", String(theme === "dark"));
+      button.setAttribute("aria-label", `Switch to ${nextLabel}`);
+      button.title = `Switch to ${nextLabel}`;
+      if (label) label.textContent = nextLabel;
+    };
+
+    applyTheme(theme);
+    button.addEventListener("click", () => {
+      const nextTheme = theme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+      try { localStorage.setItem(THEME_STORAGE_KEY, nextTheme); } catch {}
+    });
+  }
+
   function keepZoomCheckInsideViewport() {
     const sync = () => {
       const value = document.documentElement.style.zoom.trim();
@@ -547,6 +591,7 @@
     sync();
   }
 
+  setupTheme();
   setupAccessGate();
   keepZoomCheckInsideViewport();
   if (document.getElementById("route-grid")) {
