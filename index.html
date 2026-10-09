@@ -184,7 +184,7 @@
       html.staticrypt-html, body.staticrypt-body, .staticrypt-content { background:#102f2a; color:#f3efe4; }
       .staticrypt-form { background:#1c433c; } .staticrypt-password-container { background:#f3efe4; color:#102f2a; }
     }
-    </style></head>
+    </style><script src="trip-pages.js?v=20261010-pages"></script></head>
 
     <body class="staticrypt-body">
         <div id="staticrypt_loading" class="staticrypt-spinner-container">
@@ -643,7 +643,7 @@ function init(staticryptConfig, templateConfig) {
         if (typeof replaceHtmlCallback === "function") {
             replaceHtmlCallback(plainHTML);
         } else {
-            document.write(plainHTML);
+            document.write(window.bhutanPage(plainHTML));
             document.close();
         }
 
@@ -681,6 +681,7 @@ function init(staticryptConfig, templateConfig) {
             };
         }
 
+        if (!isRememberChecked) sessionStorage.setItem(rememberPassphraseKey, hashedPassword); else sessionStorage.removeItem(rememberPassphraseKey);
         // remember the hashedPassword and set its expiration if necessary
         if (isRememberEnabled && isRememberChecked) {
             window.localStorage.setItem(rememberPassphraseKey, hashedPassword);
@@ -710,7 +711,7 @@ function init(staticryptConfig, templateConfig) {
         if (typeof clearLocalStorageCallback === "function") {
             clearLocalStorageCallback();
         } else {
-            localStorage.removeItem(rememberPassphraseKey);
+            localStorage.removeItem(rememberPassphraseKey); sessionStorage.removeItem(rememberPassphraseKey);
             localStorage.removeItem(rememberExpirationKey);
         }
     }
@@ -777,7 +778,7 @@ function init(staticryptConfig, templateConfig) {
             }
         }
 
-        const hashedPassword = localStorage.getItem(rememberPassphraseKey);
+        const hashedPassword = localStorage.getItem(rememberPassphraseKey) || sessionStorage.getItem(rememberPassphraseKey);
 
         if (hashedPassword) {
             // try to decrypt
