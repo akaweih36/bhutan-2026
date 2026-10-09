@@ -1,7 +1,0 @@
-.playwright-mcp/
-artifacts/
-reports/
-*.log
-*.tmp
-.DS_Store
-Thumbs.db

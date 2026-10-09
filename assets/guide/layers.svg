@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" width="760" height="560" role="img" aria-labelledby="title desc">
+<title id="title">Four clothing layers</title><desc id="desc">Base, fleece, insulation and shell. Remove layers while walking; add them when resting.</desc>
+<rect width="760" height="560" fill="#f5f0e7"/>
+<g font-family="Arial, Noto Sans TC, Microsoft JhengHei, Noto Sans JP, Yu Gothic UI, sans-serif" fill="#153b35">
+<text x="30" y="55" font-size="30" font-weight="bold">INSIDE TO OUTSIDE</text>
+<g transform="translate(30 100)"><path d="M65 0 35 15 0 68 30 85 47 58 47 175 145 175 145 58 163 85 192 68 158 15 128 0 112 20 81 20Z" fill="#c9d9d0" stroke="#153b35" stroke-width="3"/><text x="240" y="40" font-size="28" font-weight="bold">1 BASE LAYER</text><text x="240" y="82" font-size="25">Thin thermal / wicking top</text><text x="240" y="122" font-size="23">Stay dry while walking.</text></g>
+<rect x="30" y="300" width="700" height="62" fill="#d7e2d8"/><text x="48" y="341" font-size="27">2 FLEECE / WOOL · adjustable warmth</text>
+<rect x="30" y="374" width="700" height="62" fill="#ead0a0"/><text x="48" y="415" font-size="27">3 INSULATION · cold starts and breaks</text>
+<rect x="30" y="448" width="700" height="62" fill="#d5b6a6"/><text x="48" y="489" font-size="27">4 SHELL · wind or rain</text>
+<text x="30" y="543" font-size="23">Walk warm, not sweaty. Add a layer when you stop.</text>
+</g></svg>
