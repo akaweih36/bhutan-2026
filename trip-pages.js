@@ -36,6 +36,19 @@ function tripNavigation(current) {
 }
 document.addEventListener('DOMContentLoaded', () => {
   if (!document.querySelector('#site-shell')) {
+    const themeButton = document.querySelector('#theme-toggle');
+    const setTheme = theme => {
+      document.documentElement.dataset.theme = theme;
+      themeButton?.setAttribute('aria-pressed', String(theme === 'dark'));
+    };
+    let savedTheme;
+    try { savedTheme = localStorage.getItem('bhutan-2026-theme'); } catch (_) {}
+    setTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    themeButton?.addEventListener('click', () => {
+      const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      setTheme(theme);
+      try { localStorage.setItem('bhutan-2026-theme', theme); } catch (_) {}
+    });
     const button = document.querySelector('#nav-toggle'), panel = document.querySelector('#nav-panel');
     const close = () => { panel?.classList.remove('is-open'); button?.setAttribute('aria-expanded', 'false'); };
     button?.addEventListener('click', () => {
